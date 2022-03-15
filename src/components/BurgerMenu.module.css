@@ -1,0 +1,24 @@
+.burger-menu {
+    margin-right: 3rem;
+}
+
+.line1,
+.line2,
+.line3 {
+    background-color: white;
+    width: 32px;
+    height: 1px;
+    margin: 0.5rem 0;
+}
+
+/* .animation.line2 {
+    visibility: hidden;
+}
+
+.animation.line1 {
+    transform: rotate(45deg) translateY(0.75rem) translateX(0.75rem);
+}
+
+.animation.line3 {
+    transform: rotate(135deg); 
+} */

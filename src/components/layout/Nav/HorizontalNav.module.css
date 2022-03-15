@@ -1,0 +1,11 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #999999bb;
+    padding: 0.5rem;
+}
+
+.logo-wrapper {
+    width: 200px;
+}

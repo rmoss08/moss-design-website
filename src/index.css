@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Fira+Sans&family=Lato:wght@300;400&family=Open+Sans:wght@300&display=swap');
+@font-face {
+    font-family: 'Addington CF';
+    src: url('../public/fonts/AddingtonCF-Light.otf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Addington CF';
+    src: url('../public/fonts/AddingtonCF-BoldItalic.otf');
+    font-weight: 700;
+    font-style: italic;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FCF3EC;
+    font-family: 'Addington CF', serif;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    margin: 0;
+}

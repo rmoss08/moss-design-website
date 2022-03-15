@@ -1,0 +1,14 @@
+.nav {
+    position: absolute;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background: #999999bb;
+    color: white;
+    padding: 1rem;
+}
+
+.logo-wrapper {
+    width: 300px;
+    margin: 2rem auto;
+}
