@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Amarante&family=Fira+Sans&family=Lato:wght@300;400&family=Open+Sans:wght@300&display=swap');
-
-.directory {
-    text-align: center;
-    margin: 2rem auto;
-    padding: 0;
-}
     
-.directory li {
+.page {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     list-style: none;

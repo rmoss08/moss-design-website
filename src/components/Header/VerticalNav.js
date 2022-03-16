@@ -1,6 +1,6 @@
-import CloseButton from "../../CloseButton";
-import Logo from "../../Logo";
-import Directory from "../../Directory";
+import CloseButton from "./CloseButton";
+import Logo from "../Logo";
+import PageList from "../PageList";
 
 import styles from './VerticalNav.module.css';
 
@@ -11,7 +11,9 @@ const VerticalNav = () => {
             <div className={styles['logo-wrapper']}>
                 <Logo />
             </div>
-            <Directory />
+            <ul className={styles['pagelist-wrapper']}>
+                <PageList />
+            </ul>
         </nav>
     );
 };

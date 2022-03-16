@@ -1,5 +1,5 @@
-import BurgerMenu from '../../BurgerMenu';
-import Logo from '../../Logo';
+import BurgerMenu from './BurgerMenu';
+import Logo from '../Logo';
 
 import styles from './HorizontalNav.module.css';
 

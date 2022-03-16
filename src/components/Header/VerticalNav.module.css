@@ -12,3 +12,9 @@
     width: 300px;
     margin: 2rem auto;
 }
+
+.pagelist-wrapper {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 0;
+}

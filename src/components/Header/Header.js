@@ -1,7 +1,7 @@
 import { Fragment, useContext } from 'react';
-import { NavContext } from '../store/nav-context';
-import HorizontalNav from './layout/Nav/HorizontalNav';
-import VerticalNav from './layout/Nav/VerticalNav';
+import { NavContext } from '../../store/nav-context';
+import HorizontalNav from './HorizontalNav';
+import VerticalNav from './VerticalNav';
 
 const Header = () => {
     const navCtx = useContext(NavContext);

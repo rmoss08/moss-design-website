@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { NavContext } from '../store/nav-context';
+import { NavContext } from '../../store/nav-context';
 import styles from './CloseButton.module.css';
 
 const CloseButton = () => {

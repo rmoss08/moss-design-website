@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import {NavContext} from '../store/nav-context'
+import {NavContext} from '../../store/nav-context'
 
 import styles from './BurgerMenu.module.css';
 

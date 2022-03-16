@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Fira+Sans&family=Lato:wght@300;400&family=Open+Sans:wght@300&display=swap');
+
+.footer {
+    background: #999999bb;
+    font-family: 'Lato', sans-serif;
+    color: white;
+    /* Add left padding when you get a cropped logo svg */
+}
+
+.footer p {
+    font-weight: 300;
+    font-size: 0.75rem;
+    margin: 0;
+    padding: 0 0 2rem 4rem;
+}
+.pagelist-wrapper {
+    margin: 0 0 2rem 4rem;
+    padding: 1rem 0 0 0;
+}
+
+.logo-wrapper {
+    width: 300px;
+}
