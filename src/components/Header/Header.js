@@ -6,7 +6,6 @@ import VerticalNav from './VerticalNav';
 const Header = () => {
     const navCtx = useContext(NavContext);
     const showVerticalNav = navCtx.isVerticalNavShown;
-    console.log(showVerticalNav);
 
     return (
     <Fragment>

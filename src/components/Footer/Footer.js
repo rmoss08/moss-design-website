@@ -1,5 +1,5 @@
 import PageList from "../PageList";
-import Logo from "../Logo";
+import {ReactComponent as Logo} from '../../assets/images/moss-design-logo.svg';
 
 import styles from './Footer.module.css';
 

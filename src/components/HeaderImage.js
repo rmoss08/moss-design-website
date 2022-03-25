@@ -1,12 +1,10 @@
 import Image from '../assets/images/front-view-rendering.jpg';
-// import styles from './HeaderImage.module.css';
+import styles from './HeaderImage.module.css';
 
 const HeaderImage = () => {
-    const imageStyle = `
-        background-image: url(${Image})
-    `
-
-    return <div style={imageStyle}></div>
+    return <div className={styles['image__wrapper']}>
+        <img src={Image} />
+    </div>
 };
 
 export default HeaderImage;

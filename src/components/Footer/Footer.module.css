@@ -19,5 +19,7 @@
 }
 
 .logo-wrapper {
+    fill: white;
     width: 300px;
+    height: auto;
 }

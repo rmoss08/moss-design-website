@@ -1,5 +1,5 @@
 import BurgerMenu from './BurgerMenu';
-import Logo from '../Logo';
+import {ReactComponent as Logo} from '../../assets/images/moss-design-logo.svg';
 
 import styles from './HorizontalNav.module.css';
 
