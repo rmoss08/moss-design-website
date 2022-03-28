@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 
 export const NavContext = React.createContext({
+  isInitialPosition: true,
   isVerticalNavShown: false,
   openVerticalNav: () => {},
   closeVerticalNav: () => {},
 });
 
 export const NavContextProvider = (props) => {
+  const [isInitialPosition, setIsInitialPosition] = useState(true);
   const [isVerticalNavShown, setIsVerticalNavShown] = useState(false);
 
   const openVerticalNavHandler = () => {
     setIsVerticalNavShown(true);
-    console.log('openVerticalNavHandler:');
-    console.log(isVerticalNavShown);
   };
 
   const closeVerticalNavHandler = () => {
@@ -20,6 +20,7 @@ export const NavContextProvider = (props) => {
   };
 
   const contextValue = {
+    isInitialPosition: isInitialPosition,
     isVerticalNavShown: isVerticalNavShown,
     openVerticalNav: openVerticalNavHandler,
     closeVerticalNav: closeVerticalNavHandler,

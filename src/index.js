@@ -8,7 +8,7 @@ import './index.css';
 ReactDOM.render(
   <React.StrictMode>
     <NavContextProvider>
-      <App />
+        <App />
     </NavContextProvider>
   </React.StrictMode>,
   document.getElementById('root')

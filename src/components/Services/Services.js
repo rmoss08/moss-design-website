@@ -1,4 +1,5 @@
 import Service from './Service';
+import styles from './Services.module.css';
 
 const SERVICES = [
   {
@@ -29,9 +30,13 @@ const SERVICES = [
 
 const Services = () => {
   const serviceComponents = SERVICES.map((service) => (
-    <Service key={service.id} title={service.title} description={service.description} />
+    <Service
+      key={service.id}
+      title={service.title}
+      description={service.description}
+    />
   ));
-  return <div>{serviceComponents};</div>;
+  return <div className={styles.services}>{serviceComponents}</div>;
 };
 
 export default Services;
