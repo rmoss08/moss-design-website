@@ -1,29 +1,34 @@
 import React, { useState } from 'react';
 
 export const NavContext = React.createContext({
-  isInitialPosition: true,
-  isVerticalNavShown: false,
-  openVerticalNav: () => {},
+  isNavTransparent: true,
+  isSideDrawerShown: false,
+  toggleNavTransparency: () => {},
+  toggleSideDrawer: () => {},
   closeVerticalNav: () => {},
 });
 
 export const NavContextProvider = (props) => {
-  const [isInitialPosition, setIsInitialPosition] = useState(true);
-  const [isVerticalNavShown, setIsVerticalNavShown] = useState(false);
+  const [isNavTransparent, setIsNavTransparent] = useState(false);
+  const [isSideDrawerShown, setIsSideDrawerShown] = useState(false);
 
-  const openVerticalNavHandler = () => {
-    setIsVerticalNavShown(true);
+  const toggleNavTransparency = () => {
+    setIsNavTransparent(prevState => {
+      return !prevState;
+    })
   };
 
-  const closeVerticalNavHandler = () => {
-    setIsVerticalNavShown(false);
+  const toggleSideDrawerHandler = () => {
+    setIsSideDrawerShown(prevState => {
+      return !prevState;
+    });
   };
 
   const contextValue = {
-    isInitialPosition: isInitialPosition,
-    isVerticalNavShown: isVerticalNavShown,
-    openVerticalNav: openVerticalNavHandler,
-    closeVerticalNav: closeVerticalNavHandler,
+    isNavTransparent: isNavTransparent,
+    isSideDrawerShown: isSideDrawerShown,
+    toggleNavTransparency: toggleNavTransparency,
+    toggleSideDrawer: toggleSideDrawerHandler,
   };
   
   return (

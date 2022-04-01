@@ -6,8 +6,9 @@ const CloseButton = () => {
     const navCtx = useContext(NavContext);
 
     const crossClickHandler = () => {
-        navCtx.closeVerticalNav();
+        navCtx.toggleSideDrawer();
     }
+    
     return (
         <div className={styles.cross} onClick={crossClickHandler}>
             <div className={styles.line1}></div>

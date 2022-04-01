@@ -1,0 +1,34 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 20;
+    padding: 0.5rem;
+    /* background: #999999bb;  Remove later */
+}
+
+.visible {
+    background: #999999bb;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -o-sticky;
+    position: -ms-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.logo__wrapper {
+    width: 200px;
+    height: auto;
+}
+
+.grey-logo {
+    fill: #9C9C9C;
+}
+
+.white-logo {
+    fill: white;
+}

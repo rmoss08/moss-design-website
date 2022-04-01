@@ -1,16 +1,16 @@
 import { Fragment, useContext } from 'react';
 import { NavContext } from '../../store/nav-context';
-import HorizontalNav from './HorizontalNav';
-import VerticalNav from './VerticalNav';
+import HorizontalNav from './NavBar';
+import VerticalNav from './SideDrawer';
 
 const Header = () => {
     const navCtx = useContext(NavContext);
-    const showVerticalNav = navCtx.isVerticalNavShown;
+    const showSideDrawer = navCtx.isSideDrawerShown;
 
     return (
     <Fragment>
-      {!showVerticalNav && <HorizontalNav />}
-      {showVerticalNav && <VerticalNav />}
+      {!showSideDrawer && <HorizontalNav />}
+      {showSideDrawer && <VerticalNav />}
     </Fragment>
   );
 };

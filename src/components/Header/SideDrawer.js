@@ -2,7 +2,8 @@ import CloseButton from "./CloseButton";
 import PageList from "../PageList";
 import {ReactComponent as Logo} from '../../assets/images/moss-design-logo.svg';
 
-import styles from './VerticalNav.module.css';
+import styles from './SideDrawer.module.css';
+import useScreenPosition from "../../hooks/use-screen-position";
 
 const VerticalNav = () => {
     return (

@@ -11,10 +11,7 @@ const BurgerMenu = (props) => {
   const navCtx = useContext(NavContext);
 
   const burgerMenuClickHandler = () => {
-    navCtx.openVerticalNav();
-    // setLine1Classes(`${styles.line1} ${styles.animation}`);
-    // setLine2Classes(`${styles.line2} ${styles.animation}`);
-    // setLine3Classes(`${styles.line3} ${styles.animation}`);
+    navCtx.toggleSideDrawer();
   };
   
   return (

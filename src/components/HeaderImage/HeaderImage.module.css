@@ -1,0 +1,13 @@
+.header-image__wrapper {
+    width: calc(120 * 2vw);
+    height: calc(100vh + 10vh);
+}
+
+.header-image__wrapper img {
+    position: relative;
+    top: -20vh;
+    right: 90vw;
+    width: inherit;
+    height: inherit;
+    z-index: -2;
+}

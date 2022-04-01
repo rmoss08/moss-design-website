@@ -1,8 +1,6 @@
 .services {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 4rem;
-    row-gap: 4rem;
-    margin: 2rem 4rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1, 1fr);
+    row-gap: 1rem;
 }

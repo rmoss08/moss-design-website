@@ -36,7 +36,7 @@ const Services = () => {
       description={service.description}
     />
   ));
-  return <div className={styles.services}>{serviceComponents}</div>;
+  return <div className={`margin ${styles.services}`}>{serviceComponents}</div>;
 };
 
 export default Services;

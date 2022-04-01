@@ -2,10 +2,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2rem 4rem;
     flex-wrap: wrap;
 }
 
-img {
-    margin-top: 2rem;
+.gallery img {
+    margin: 1rem auto;
+    width: 80vw;
+    height: auto;
 }
