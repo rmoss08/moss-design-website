@@ -11,3 +11,25 @@
     height: inherit;
     z-index: -2;
 }
+
+/* .span__animation {
+    animation-duration: 60s;
+    animation-iteration-count: 5; 
+    animation-timing-function: linear;
+    animation-name: span;
+
+}
+
+@keyframes span {
+    0% {
+        right: 90vw;
+    }
+
+    50% {
+        right: 40vw;
+    }
+
+    100% {
+        right: 90vw;
+    }
+} */

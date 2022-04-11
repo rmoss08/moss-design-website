@@ -4,13 +4,15 @@ import App from './App';
 import { NavContextProvider } from './store/nav-context';
 
 import './index.css';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <NavContextProvider>
+    <BrowserRouter>
+      <NavContextProvider>
         <App />
-    </NavContextProvider>
+      </NavContextProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
-

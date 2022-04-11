@@ -1,17 +1,19 @@
 import CloseButton from "./CloseButton";
-import PageList from "../PageList";
+import PageList from "../PageList/PageList";
 import {ReactComponent as Logo} from '../../assets/images/moss-design-logo.svg';
 
 import styles from './SideDrawer.module.css';
-import useScreenPosition from "../../hooks/use-screen-position";
+import { Link } from "react-router-dom";
 
-const VerticalNav = () => {
+const SideDrawer = () => {
     return (
         <nav className={styles.nav}>
             <CloseButton />
-            <div className={styles['logo-wrapper']}>
-                <Logo />
-            </div>
+            <Link to='/'>
+                <div className={styles['logo-wrapper']}>
+                    <Logo />
+                </div>
+            </Link>
             <ul className={styles['pagelist-wrapper']}>
                 <PageList />
             </ul>
@@ -19,4 +21,4 @@ const VerticalNav = () => {
     );
 };
 
-export default VerticalNav;
+export default SideDrawer;

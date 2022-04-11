@@ -1,7 +1,7 @@
 import { Fragment, useContext } from 'react';
 import { NavContext } from '../../store/nav-context';
-import HorizontalNav from './NavBar';
-import VerticalNav from './SideDrawer';
+import NavBar from './NavBar';
+import SideDrawer from './SideDrawer';
 
 const Header = () => {
     const navCtx = useContext(NavContext);
@@ -9,8 +9,8 @@ const Header = () => {
 
     return (
     <Fragment>
-      {!showSideDrawer && <HorizontalNav />}
-      {showSideDrawer && <VerticalNav />}
+      {!showSideDrawer && <NavBar />}
+      {showSideDrawer && <SideDrawer />}
     </Fragment>
   );
 };

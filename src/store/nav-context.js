@@ -5,13 +5,13 @@ export const NavContext = React.createContext({
   isSideDrawerShown: false,
   toggleNavTransparency: () => {},
   toggleSideDrawer: () => {},
-  closeVerticalNav: () => {},
 });
 
 export const NavContextProvider = (props) => {
-  const [isNavTransparent, setIsNavTransparent] = useState(false);
+  const [isNavTransparent, setIsNavTransparent] = useState(true);
   const [isSideDrawerShown, setIsSideDrawerShown] = useState(false);
 
+  
   const toggleNavTransparency = () => {
     setIsNavTransparent(prevState => {
       return !prevState;
@@ -23,7 +23,7 @@ export const NavContextProvider = (props) => {
       return !prevState;
     });
   };
-
+  
   const contextValue = {
     isNavTransparent: isNavTransparent,
     isSideDrawerShown: isSideDrawerShown,

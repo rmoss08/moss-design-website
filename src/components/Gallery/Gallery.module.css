@@ -6,7 +6,42 @@
 }
 
 .gallery img {
+    position:relative;
     margin: 1rem auto;
     width: 80vw;
     height: auto;
+}
+
+.left-slidein__animation {
+    transition: ease-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-name: right-slidein;
+}
+
+.right-slidein__animation {
+    transition: ease-in;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-name: slidein;
+}
+
+@keyframes left-slidein {
+    0% {
+        left: -50vw;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes right-slidein {
+    0% {
+        right: -50vw;
+    }
+
+    100% {
+        right: 0;
+    }
 }
