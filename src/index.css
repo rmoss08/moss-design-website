@@ -19,6 +19,7 @@ body {
     background-color: #FCF3EC;
     font-family: 'Addington CF', serif;
     overflow-x: hidden;
+    height:auto;
     margin: 0;
 }
 

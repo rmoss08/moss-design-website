@@ -4,7 +4,7 @@
     align-items: center;
     z-index: 20;
     padding: 0.5rem;
-    /* background: #999999bb;  Remove later */
+    transition: top 3s ease-in opactity 3s ease-in 1s;
 }
 
 .visible {

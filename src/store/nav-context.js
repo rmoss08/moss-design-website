@@ -1,36 +1,43 @@
 import React, { useState } from 'react';
 
 export const NavContext = React.createContext({
-  isNavTransparent: true,
-  isSideDrawerShown: false,
-  toggleNavTransparency: () => {},
-  toggleSideDrawer: () => {},
+  isTransparent: true,
+  isSticky: false,
+  addTransparency: () => {},
+  removeTransparency: () => {},
+  addSticky: () => {},
+  removeSticky: () => {},
 });
 
 export const NavContextProvider = (props) => {
-  const [isNavTransparent, setIsNavTransparent] = useState(true);
-  const [isSideDrawerShown, setIsSideDrawerShown] = useState(false);
+  const [isTransparent, setIsTransparent] = useState(true);
+  const [isSticky, setIsSticky] = useState(false);
 
-  
-  const toggleNavTransparency = () => {
-    setIsNavTransparent(prevState => {
-      return !prevState;
-    })
+  const addTransparency = () => {
+    setIsTransparent(true);
   };
 
-  const toggleSideDrawerHandler = () => {
-    setIsSideDrawerShown(prevState => {
-      return !prevState;
-    });
+  const removeTransparency = () => {
+    setIsTransparent(false);
   };
-  
+
+  const addSticky = () => {
+    setIsSticky(true);
+  };
+
+  const removeSticky = () => {
+    setIsSticky(false);
+  };
+
   const contextValue = {
-    isNavTransparent: isNavTransparent,
-    isSideDrawerShown: isSideDrawerShown,
-    toggleNavTransparency: toggleNavTransparency,
-    toggleSideDrawer: toggleSideDrawerHandler,
+    isTransparent: isTransparent,
+    isSticky: isSticky,
+    addTransparency,
+    removeTransparency,
+    addSticky,
+    removeSticky,
   };
-  
+
   return (
     <NavContext.Provider value={contextValue}>
       {props.children}

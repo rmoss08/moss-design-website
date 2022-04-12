@@ -4,7 +4,7 @@ const Gallery = (props) => {
   const galleryImgs = props.images.map((image) => (
     <img
       key={image.id}
-      className={styles['right-slidein__animation']}
+      className={styles['opacity']}
       src={image.src}
       alt={image.alt}
     />

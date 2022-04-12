@@ -1,12 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-const getScreenPosition = (event) => {
-  if (event) {
-    const touchList = event.touches[0];
-    return { x: touchList.clientX, y: touchList.clientY };
-  } else {
-    return { x: window.scrollX, y: window.scrollY };
-  }
+const getDeviceSize = () => {
+  const viewportWidth = Math.max(
+    document.documentElement.clientWidth || 0,
+    window.innerWidth || 0
+  );
+  const viewportHeight = Math.max(
+    document.documentElement.clientHeight || 0,
+    window.innerHeight || 0
+  );
+
+  return { viewportWidth, viewportHeight };
+};
+
+const getScreenPosition = () => {
+  return { x: window.scrollX, y: window.scrollY };
 };
 
 const useScreenPosition = () => {
@@ -16,14 +24,28 @@ const useScreenPosition = () => {
     y: 0,
   });
 
-  const scrollHandler = (event) => {
+  const scrollHandler = (eventType) => {
     setTimeout(() => {
-      setScreenPosition(getScreenPosition(event));
+      setScreenPosition(getScreenPosition());
     }, 300);
   };
 
-  window.addEventListener('scroll', scrollHandler);
-  window.addEventListener('touchmove', scrollHandler);
+  const viewportWidth = getDeviceSize().viewportWidth;
+
+  useEffect(() => {
+    if (viewportWidth < 500) {
+      window.addEventListener('touchmove', scrollHandler);
+    } else {
+      window.addEventListener('scroll', scrollHandler);
+    }
+    return () => {
+      if (viewportWidth < 500) {
+        window.removeEventListener('touchmove', scrollHandler);
+      } else {
+        window.removeEventListener('scroll', scrollHandler);
+      }
+    };
+  }, [viewportWidth]);
 
   return screenPosition;
 };

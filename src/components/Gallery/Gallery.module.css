@@ -26,6 +26,12 @@
     animation-name: slidein;
 }
 
+.opacity {
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-name: fadein;
+}
+
 @keyframes left-slidein {
     0% {
         left: -50vw;
@@ -43,5 +49,14 @@
 
     100% {
         right: 0;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
