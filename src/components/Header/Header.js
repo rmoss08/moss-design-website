@@ -1,11 +1,11 @@
 import { Fragment, useContext } from 'react';
-import { NavContext } from '../../store/nav-context';
+import { HeaderContext } from '../../store/header-context';
 import NavBar from './NavBar';
 import SideDrawer from './SideDrawer';
 
 const Header = () => {
-    const navCtx = useContext(NavContext);
-    const showSideDrawer = navCtx.isSideDrawerShown;
+    const headerCtx = useContext(HeaderContext);
+    const showSideDrawer = headerCtx.isSideDrawerShown;
 
     return (
     <Fragment>

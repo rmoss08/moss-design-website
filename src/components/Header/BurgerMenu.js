@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import {NavContext} from '../../store/nav-context'
+import { HeaderContext} from '../../store/header-context'
 
 import styles from './BurgerMenu.module.css';
 
@@ -8,10 +8,10 @@ const BurgerMenu = (props) => {
   const [line2Classes, setLine2Classes] = useState(`${styles.line2}`);  
   const [line3Classes, setLine3Classes] = useState(`${styles.line3}`);
 
-  const navCtx = useContext(NavContext);
+  const headerCtx = useContext(HeaderContext);
 
   const burgerMenuClickHandler = () => {
-    navCtx.toggleSideDrawer();
+    headerCtx.toggleSideDrawer();
   };
   
   return (

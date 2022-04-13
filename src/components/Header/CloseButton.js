@@ -1,12 +1,12 @@
 import { useContext } from 'react';
-import { NavContext } from '../../store/nav-context';
+import { HeaderContext } from '../../store/header-context';
 import styles from './CloseButton.module.css';
 
 const CloseButton = () => {
-    const navCtx = useContext(NavContext);
+    const headerCtx = useContext(HeaderContext);
 
     const crossClickHandler = () => {
-        navCtx.toggleSideDrawer();
+        headerCtx.toggleSideDrawer();
     }
     
     return (

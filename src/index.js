@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { NavContextProvider } from './store/nav-context';
+import { HeaderContextProvider } from './store/header-context';
 
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
@@ -9,9 +9,9 @@ import { BrowserRouter } from 'react-router-dom';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <NavContextProvider>
+      <HeaderContextProvider>
         <App />
-      </NavContextProvider>
+      </HeaderContextProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
