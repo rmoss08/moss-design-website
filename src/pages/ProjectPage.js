@@ -1,7 +1,7 @@
-import Layout from '../../components/Layout';
-import HeaderImage from '../../components/HeaderImage/HeaderImage';
-import { HeaderImages, HomePageGalleryImages } from '../../images';
-import Gallery from '../../components/Gallery/Gallery';
+import Layout from '../components/Layout';
+import HeaderImage from '../components/HeaderImage/HeaderImage';
+import { HeaderImages, ProjectGalleryDrawings, ProjectGalleryRednerings } from '../images';
+import Gallery from '../components/Gallery/Gallery';
 import styles from './ProjectPage.module.css';
 
 const ProjectPage = () => {
@@ -32,10 +32,11 @@ const ProjectPage = () => {
       {introText}
       <div className="margin">
         <h2>RENDERINGS</h2>
-        <Gallery images={HomePageGalleryImages} />
+        <Gallery images={ProjectGalleryRednerings} />
       </div>
       <div className="margin">
         <h2>DRAWINGS</h2>
+        <Gallery images={ProjectGalleryDrawings} />
       </div>
     </Layout>
   );

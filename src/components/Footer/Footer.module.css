@@ -4,18 +4,17 @@
     background: #999999bb;
     font-family: 'Lato', sans-serif;
     color: white;
-    /* Add left padding when you get a cropped logo svg */
+    padding: 0.5rem 0;
 }
 
 .footer p {
     font-weight: 300;
     font-size: 0.75rem;
-    margin: 0;
-    padding: 0 0 2rem 4rem;
+    margin-bottom: 2rem;
 }
 .pagelist-wrapper {
-    margin: 0 0 2rem 4rem;
-    padding: 1rem 0 0 0;
+    margin-bottom: 2rem;
+    padding: 0;
 }
 
 .logo-wrapper {

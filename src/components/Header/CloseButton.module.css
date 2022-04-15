@@ -1,9 +1,8 @@
 .cross {
-    position: absolute;
-    right: 0;
-    height: 32px;
-    margin: 0.5rem;
+    width: 32px;
+    height:32px;
 }
+
 .line1,
 .line2 {
     background-color: white;

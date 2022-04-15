@@ -13,7 +13,7 @@ const PageList = () => {
                 <li className={styles.page}>PROJECTS</li>
             </Link>
             <Link to='/contact'>
-                <li className={styles.page}>CONTACT</li>
+                <li className={`${styles.page} ${styles.page}`}>CONTACT</li>
             </Link>
         </Fragment>
     );

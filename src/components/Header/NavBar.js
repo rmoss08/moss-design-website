@@ -1,4 +1,4 @@
-import { useContext, useLayoutEffect, useState } from 'react';
+import { useContext, useEffect, useLayoutEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useScreenPosition from '../../hooks/use-scroll-position';
 import { HeaderContext } from '../../store/header-context';
@@ -12,16 +12,18 @@ const NavBar = () => {
 
   const displayHeight = document.querySelector('html').clientHeight;
   const yPos = useScreenPosition().y;
-
+  
   useLayoutEffect(() => {
     let isScrolling = true;
     
     const navHeight = document.querySelector('nav').clientHeight;
     const scrollLimit = displayHeight - navHeight;
 
-    if (yPos === 0) {
-      headerCtx.addNavTransparency();
-      headerCtx.removeNavSticky();
+    if (!headerCtx.isNavLocked) {
+      if (yPos === 0) {
+        headerCtx.addNavTransparency();
+        headerCtx.removeNavSticky();
+      }
     }
     if (yPos > 0 && yPos < scrollLimit) {
       headerCtx.removeNavTransparency();
@@ -44,11 +46,11 @@ const NavBar = () => {
     logoClasses = `${styles['logo__wrapper']} ${styles['grey-logo']}`;
   }
   if (!headerCtx.isNavTransparent && headerCtx.isNavSticky) {
-    navClasses = `${styles.nav} ${styles.sticky} ${styles.visible}`;
+    navClasses = `${styles.nav} ${styles.sticky} ${styles.visible2}`;
     logoClasses = `${styles['logo__wrapper']} ${styles['white-logo']}`;
   }
   if (!headerCtx.isNavTransparent && !headerCtx.isNavSticky) {
-    navClasses = `${styles.nav} ${styles.visible}`;
+    navClasses = `${styles.nav} ${styles.visible2}`;
     logoClasses = `${styles['logo__wrapper']} ${styles['white-logo']}`;
   }
 

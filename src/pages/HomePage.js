@@ -3,6 +3,7 @@ import HeaderImage from '../components/HeaderImage/HeaderImage';
 import Services from '../components/Services/Services';
 import Gallery from '../components/Gallery/Gallery';
 import { HeaderImages, HomePageGalleryImages } from '../images';
+import LoadingSpinner from '../components/LoadingSpinner/LoadingSpinner';
 
 const frontViewRendering = HeaderImages[0];
 

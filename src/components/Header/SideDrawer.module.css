@@ -1,13 +1,9 @@
-.nav {
-    position: sticky;
+.side-drawer {
+    width: 100vw;
+    position: absolute;
     top: 0;
-    right: 0;
     z-index: 5;
-    width: 300px;
-    height: 100vh;
     background: #999999bb;
-    color: white;
-    padding: 1rem;
 }
 
 .logo-wrapper {

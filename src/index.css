@@ -29,7 +29,32 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(61, 93, 233)
+}
+
 .margin {
     width: 80vw;
     margin: 2rem auto;
 }
+
+.min-height {
+    min-height: 40vh;
+}
+
+/* Classes not working as intended */
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 5s, opacity 5s;
+  }
+  .visible {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+  }

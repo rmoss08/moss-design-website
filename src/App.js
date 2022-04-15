@@ -3,9 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import LoadingSpinner from './components/LoadingSpinner/LoadingSpinner';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
-const AboutPage = lazy(() => import('./pages/AboutPage/AboutPage'));
-const ProjectPage = lazy(() => import('./pages/ProjectPage/ProjectPage'));
-const ContactPage = lazy(() => import('./pages/ContactPage/ContactPage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const ProjectPage = lazy(() => import('./pages/ProjectPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 function App() {

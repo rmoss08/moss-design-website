@@ -3,12 +3,13 @@
     justify-content: space-between;
     align-items: center;
     z-index: 20;
+    height: 12vh;
     padding: 0.5rem;
-    transition: top 3s ease-in opactity 3s ease-in 1s;
+    transition: background-color 1.5s ease-out, opacity 1.5s ease-out;
 }
 
-.visible {
-    background: #999999bb;
+.visible2 {
+    background-color: #999999bb;
 }
 
 .sticky {

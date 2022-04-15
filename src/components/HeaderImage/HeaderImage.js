@@ -1,13 +1,12 @@
-// import Image from '../../assets/images/front-view-rendering.jpg';
 import styles from './HeaderImage.module.css';
 
 const HeaderImage = (props) => {
   return (
-    <div className={styles['header-image__wrapper']}>
+    <div className={styles['header-image']}>
       <img
         src={props.imageSrc}
         alt={props.imageAlt}
-        className={styles['span__animation']}
+        className={styles['span-animation']}
       />
     </div>
   );
