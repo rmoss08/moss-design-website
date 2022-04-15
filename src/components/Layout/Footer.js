@@ -1,4 +1,4 @@
-import PageList from "../PageList/PageList";
+import PageList from "./PageList";
 import {ReactComponent as Logo} from '../../assets/images/moss-design-logo.svg';
 
 import styles from './Footer.module.css';

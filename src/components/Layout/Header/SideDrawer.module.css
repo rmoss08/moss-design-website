@@ -6,6 +6,26 @@
     background: #999999bb;
 }
 
+.cross {
+    width: 32px;
+    height:32px;
+}
+
+.line1,
+.line2 {
+    background-color: white;
+    width: 32px;
+    height: 1px;
+}
+
+.line1 {
+    transform: rotate(45deg);
+}
+
+.line2 {
+    transform: rotate(135deg); 
+}
+
 .logo-wrapper {
     fill: white;
     width: 300px;

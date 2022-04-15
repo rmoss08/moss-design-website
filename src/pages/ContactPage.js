@@ -1,5 +1,5 @@
-import ConnectButton from '../components/ConnectLink/ConnectLink';
-import Layout from '../components/Layout';
+import ConnectButton from '../components/ConnectLink';
+import Layout from '../components/Layout/Layout';
 import { useContext, useEffect } from 'react';
 import { HeaderContext } from '../store/header-context';
 

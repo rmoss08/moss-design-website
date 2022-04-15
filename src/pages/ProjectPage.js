@@ -1,7 +1,7 @@
-import Layout from '../components/Layout';
-import HeaderImage from '../components/HeaderImage/HeaderImage';
+import Layout from '../components/Layout/Layout';
+import HeaderImage from '../components/HeaderImage';
 import { HeaderImages, ProjectGalleryDrawings, ProjectGalleryRednerings } from '../images';
-import Gallery from '../components/Gallery/Gallery';
+import Gallery from '../components/Gallery';
 import styles from './ProjectPage.module.css';
 
 const ProjectPage = () => {

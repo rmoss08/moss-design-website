@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import { HeaderContext} from '../../store/header-context'
+import { HeaderContext} from '../../../store/header-context'
 
 import styles from './BurgerMenu.module.css';
 

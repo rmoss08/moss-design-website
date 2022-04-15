@@ -1,7 +1,6 @@
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout';
 import { useContext, useEffect } from 'react';
 import { HeaderContext } from '../store/header-context';
-import LoadingSpinner from '../components/LoadingSpinner/LoadingSpinner';
 
 const NotFoundPage = () => {
   const navCtx = useContext(HeaderContext);

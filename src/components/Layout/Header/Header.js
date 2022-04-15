@@ -1,6 +1,6 @@
 import { Fragment, useContext } from 'react';
-import { HeaderContext } from '../../store/header-context';
-import NavBar from './NavBar';
+import { HeaderContext } from '../../../store/header-context';
+import NavBar from './Nav';
 import SideDrawer from './SideDrawer';
 
 const Header = () => {

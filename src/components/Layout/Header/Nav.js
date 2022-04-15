@@ -1,13 +1,13 @@
 import { useContext, useEffect, useLayoutEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import useScreenPosition from '../../hooks/use-scroll-position';
-import { HeaderContext } from '../../store/header-context';
-import { ReactComponent as Logo } from '../../assets/images/moss-design-logo.svg';
+import useScreenPosition from '../../../hooks/use-scroll-position';
+import { HeaderContext } from '../../../store/header-context';
+import { ReactComponent as Logo } from '../../../assets/images/moss-design-logo.svg';
 import BurgerMenu from './BurgerMenu';
 
-import styles from './NavBar.module.css';
+import styles from './Nav.module.css';
 
-const NavBar = () => {
+const Nav = () => {
   const headerCtx = useContext(HeaderContext);
 
   const displayHeight = document.querySelector('html').clientHeight;
@@ -66,4 +66,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Nav;

@@ -1,5 +1,5 @@
-import ConnectLink from '../components/ConnectLink/ConnectLink';
-import Layout from '../components/Layout';
+import ConnectLink from '../components/ConnectLink';
+import Layout from '../components/Layout/Layout';
 import profileImage from '../assets/images/chloe.jpg';
 
 import styles from './AboutPage.module.css';
