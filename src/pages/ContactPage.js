@@ -4,11 +4,11 @@ import { useContext, useEffect } from 'react';
 import { HeaderContext } from '../store/header-context';
 
 const ContactPage = () => {
-  const navCtx = useContext(HeaderContext);
+  const headerCtx = useContext(HeaderContext);
 
   useEffect(() => {
-    navCtx.lockNav();
-    navCtx.removeNavTransparency();
+    headerCtx.lockNav();
+    // headerCtx.removeNavTransparency();
   }, []);
 
   return (

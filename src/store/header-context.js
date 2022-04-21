@@ -5,6 +5,7 @@ export const HeaderContext = React.createContext({
   isNavSticky: false,
   isNavLocked: false,
   isSideDrawerShown: false,
+  initHeader: () => {},
   addNavTransparency: () => {},
   removeNavTransparency: () => {},
   addNavSticky: () => {},
@@ -15,10 +16,31 @@ export const HeaderContext = React.createContext({
 });
 
 export const HeaderContextProvider = (props) => {
-  const [isNavTransparent, setIsNavTransparent] = useState(true);
+  const [isNavTransparent, setIsNavTransparent] = useState(false);
   const [isNavSticky, setIsNavSticky] = useState(false);
   const [isNavLocked, setIsNavLocked] = useState(false);
   const [isSideDrawerShown, setIsSideDrawerShown] = useState(false);
+
+  const initHeader = (
+    {
+      transparency = false,
+      sticky = false,
+      lock = false,
+      sidedrawer = false,
+    }
+  ) => {
+    console.log(lock);
+    setIsNavTransparent(transparency);
+    setIsNavSticky(sticky);
+    setIsNavLocked(lock);
+    setIsSideDrawerShown(sidedrawer);
+    console.table({
+      isNavTransparent,
+      isNavSticky,
+      isNavLocked,
+      isSideDrawerShown,
+    });
+  };
 
   const addNavTransparency = () => {
     setIsNavTransparent(true);
@@ -31,30 +53,31 @@ export const HeaderContextProvider = (props) => {
   const addNavSticky = () => {
     setIsNavSticky(true);
   };
-  
+
   const removeNavSticky = () => {
     setIsNavSticky(false);
   };
-  
+
   const unlockNav = () => {
-    setIsNavLocked(false)
+    setIsNavLocked(false);
   };
 
   const lockNav = () => {
-    setIsNavLocked(true)
+    setIsNavLocked(true);
   };
-  
+
   const toggleSideDrawer = () => {
     setIsSideDrawerShown((prevState) => {
       return !prevState;
     });
   };
-  
+
   const contextValue = {
     isNavTransparent: isNavTransparent,
     isNavSticky: isNavSticky,
     isNavLocked: isNavLocked,
     isSideDrawerShown: isSideDrawerShown,
+    initHeader,
     addNavTransparency,
     removeNavTransparency,
     addNavSticky,

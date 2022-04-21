@@ -17,7 +17,7 @@ const Nav = () => {
     let isScrolling = true;
     
     const navHeight = document.querySelector('nav').clientHeight;
-    const scrollLimit = displayHeight - navHeight;
+    const scrollYLimit = displayHeight - navHeight;
 
     if (!headerCtx.isNavLocked) {
       if (yPos === 0) {
@@ -25,11 +25,11 @@ const Nav = () => {
         headerCtx.removeNavSticky();
       }
     }
-    if (yPos > 0 && yPos < scrollLimit) {
+    if (yPos > 0 && yPos < scrollYLimit) {
       headerCtx.removeNavTransparency();
       headerCtx.addNavSticky();
     }
-    if (yPos > scrollLimit) {
+    if (yPos > scrollYLimit) {
       headerCtx.removeNavSticky();
     }
 
@@ -43,15 +43,15 @@ const Nav = () => {
 
   if (headerCtx.isNavTransparent && !headerCtx.isNavSticky) {
     navClasses = `${styles.nav}`;
-    logoClasses = `${styles['logo__wrapper']} ${styles['grey-logo']}`;
+    logoClasses = `${styles['nav-logo']} ${styles['grey-fill']}`;
   }
   if (!headerCtx.isNavTransparent && headerCtx.isNavSticky) {
-    navClasses = `${styles.nav} ${styles.sticky} ${styles.visible2}`;
-    logoClasses = `${styles['logo__wrapper']} ${styles['white-logo']}`;
+    navClasses = `${styles.nav} ${styles.sticky} ${styles['nav-background']}`;
+    logoClasses = `${styles['nav-logo']} ${styles['black-fill']}`;
   }
   if (!headerCtx.isNavTransparent && !headerCtx.isNavSticky) {
-    navClasses = `${styles.nav} ${styles.visible2}`;
-    logoClasses = `${styles['logo__wrapper']} ${styles['white-logo']}`;
+    navClasses = `hidden ${styles.nav} ${styles.sticky}`;
+    logoClasses = `${styles['nav-logo']} ${styles['black-fill']}`;
   }
 
   return (

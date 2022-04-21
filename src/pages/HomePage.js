@@ -13,7 +13,7 @@ const HomePage = () => {
         imageSrc={frontViewRendering.src}
         imageAlt={frontViewRendering.alt}
       />
-      <Gallery images={HomePageGalleryImages} />
+      <Gallery id='hp-gallery-1' images={HomePageGalleryImages} />
       <Services />
     </Layout>
   );

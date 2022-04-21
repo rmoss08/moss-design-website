@@ -1,35 +1,35 @@
 .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 20;
-    height: 12vh;
-    padding: 0.5rem;
-    transition: background-color 1.5s ease-out, opacity 1.5s ease-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 20;
+  height: 12vh;
+  padding: 0.5rem;
+  transition: visibility 1.5s ease-out, background-color 1.5s ease-out, opacity 1.5s ease-out;
 }
 
-.visible2 {
-    background-color: #999999bb;
+.nav-background {
+  background-color: #fcf3ec;
 }
 
 .sticky {
-    position: -webkit-sticky;
-    position: -moz-sticky;
-    position: -o-sticky;
-    position: -ms-sticky;
-    position: sticky;
-    top: 0;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
+  position: sticky;
+  top: 0;
 }
 
-.logo__wrapper {
-    width: 200px;
-    height: auto;
+.nav-logo {
+  width: 200px;
+  height: auto;
 }
 
-.grey-logo {
-    fill: #9C9C9C;
+.grey-fill {
+  fill: #9c9c9c;
 }
 
-.white-logo {
-    fill: white;
+.black-fill {
+  fill: black;
 }

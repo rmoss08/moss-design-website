@@ -7,23 +7,19 @@ import { Link } from 'react-router-dom';
 
 const SideDrawer = () => {
   const headerCtx = useContext(HeaderContext);
+  const showSideDrawer = headerCtx.isSideDrawerShown;
+  
+  let sideDrawerClasses;
 
-  const crossClickHandler = () => {
-    headerCtx.toggleSideDrawer();
-  };
+  if (showSideDrawer) {
+    sideDrawerClasses = `${styles.sidedrawer} ${styles['show-sidedrawer']}`;
+  } else {
+    sideDrawerClasses = `${styles.sidedrawer}`;
+  }
 
   return (
-    <div className={styles['side-drawer']}>
+    <div className={sideDrawerClasses}>
       <div className="margin">
-        <div className={styles.cross} onClick={crossClickHandler}>
-          <div className={styles.line1}></div>
-          <div className={styles.line2}></div>
-        </div>
-        <Link to="/">
-          <div className={styles['logo-wrapper']}>
-            <Logo />
-          </div>
-        </Link>
         <ul className={styles['pagelist-wrapper']}>
           <PageList />
         </ul>

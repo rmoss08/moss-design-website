@@ -1,13 +1,14 @@
 import Layout from '../components/Layout/Layout';
 import { useContext, useEffect } from 'react';
 import { HeaderContext } from '../store/header-context';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const NotFoundPage = () => {
-  const navCtx = useContext(HeaderContext);
+  const headerCtx = useContext(HeaderContext);
   
   useEffect(()=> {
-    navCtx.lockNav();
-    navCtx.removeNavTransparency();
+    headerCtx.lockNav();
+    // headerCtx.removeNavTransparency();
   }, [])
 
   return (
@@ -15,6 +16,7 @@ const NotFoundPage = () => {
       <div className='margin min-height'>
         <h1>Error 404</h1>
         <p>Woops! This page does not exist.</p>
+        <LoadingSpinner />
       </div>
     </Layout>
   );

@@ -1,60 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Amarante&family=Fira+Sans&family=Lato:wght@300;400&family=Open+Sans:wght@300&display=swap');
 @font-face {
-    font-family: 'Addington CF';
-    src: url('../public/fonts/AddingtonCF-Light.otf');
-    font-weight: 300;
+  font-family: 'Addington CF';
+  src: url('../public/fonts/AddingtonCF-Light.otf');
+  font-weight: 300;
 }
 @font-face {
-    font-family: 'Addington CF';
-    src: url('../public/fonts/AddingtonCF-BoldItalic.otf');
-    font-weight: 700;
-    font-style: italic;
+  font-family: 'Addington CF';
+  src: url('../public/fonts/AddingtonCF-BoldItalic.otf');
+  font-weight: 700;
+  font-style: italic;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #FCF3EC;
-    font-family: 'Addington CF', serif;
-    overflow-x: hidden;
-    height:auto;
-    margin: 0;
+  background-color: #fcf3ec;
+  font-family: 'Addington CF', serif;
+  overflow-x: hidden;
+  height: auto;
+  margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  margin: 0;
 }
 
 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 a:hover {
-    color: rgb(61, 93, 233)
+  color: rgb(61, 93, 233);
 }
 
 .margin {
-    width: 80vw;
-    margin: 2rem auto;
+  width: 80vw;
+  margin: 2rem auto;
 }
 
 .min-height {
-    min-height: 40vh;
+  min-height: 40vh;
 }
 
 /* Classes not working as intended */
 .hidden {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s linear 5s, opacity 5s;
-  }
-  .visible {
-    visibility: visible;
-    opacity: 1;
-    transition: visibility 0s linear 0s, opacity 300ms;
-  }
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 1.5s, opacity 1.5s;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 1.5s;
+}

@@ -1,36 +1,16 @@
-.side-drawer {
+.sidedrawer {
+    visibility: hidden;
     width: 100vw;
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: -12vh;
     z-index: 5;
     background: #999999bb;
+    transition: visibility 1.5s linear, top 1.5s ease-out;
 }
 
-.cross {
-    width: 32px;
-    height:32px;
-}
-
-.line1,
-.line2 {
-    background-color: white;
-    width: 32px;
-    height: 1px;
-}
-
-.line1 {
-    transform: rotate(45deg);
-}
-
-.line2 {
-    transform: rotate(135deg); 
-}
-
-.logo-wrapper {
-    fill: white;
-    width: 300px;
-    height: auto;
-    margin: 2rem auto;
+.show-sidedrawer {
+    visibility: visible;
+    top: 12vh;
 }
 
 .pagelist-wrapper {
