@@ -2,7 +2,7 @@ import { useContext, useEffect, useLayoutEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useScreenPosition from '../../../hooks/use-scroll-position';
 import { HeaderContext } from '../../../store/header-context';
-import { ReactComponent as Logo } from '../../../assets/images/moss-design-logo.svg';
+import { ReactComponent as Logo } from '../../../assets/images/moss-design-logo2.svg';
 import BurgerMenu from './BurgerMenu';
 
 import styles from './Nav.module.css';

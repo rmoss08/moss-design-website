@@ -5,5 +5,17 @@
     font-weight: 300;
     color: white;
     list-style: none;
+}
+
+.sidedrawer {
     margin: 1rem 0;
+}
+
+.footer {
+    display: inline;
+}
+
+.pipe::after {
+    content: '|';
+    margin: 0 1rem;
 }

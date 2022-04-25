@@ -21,7 +21,7 @@ const SideDrawer = () => {
     <div className={sideDrawerClasses}>
       <div className="margin">
         <ul className={styles['pagelist-wrapper']}>
-          <PageList />
+          <PageList component='sidedrawer' />
         </ul>
       </div>
     </div>

@@ -10,10 +10,6 @@ const gallery1 = HomePageGalleryImages.slice(0, 2);
 const gallery2 = HomePageGalleryImages.slice(2, 4);
 
 const HomePage = () => {
-
-  const g = document.getElementById('hp-gallery-1');
-  console.log(g);
-
   return (
     <Layout>
       <HeaderImage

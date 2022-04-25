@@ -3,20 +3,37 @@ import { Link } from 'react-router-dom';
 
 import styles from './PageList.module.css';
 
-const PageList = () => {
-    return (
-        <Fragment>
-            <Link to='/about'>
-                <li className={styles.page}>ABOUT</li>
-            </Link>
-            <Link to='/projects'>
-                <li className={styles.page}>PROJECTS</li>
-            </Link>
-            <Link to='/contact'>
-                <li className={`${styles.page} ${styles.page}`}>CONTACT</li>
-            </Link>
-        </Fragment>
-    );
+const PageList = (props) => {
+  let aboutPageClasses;
+  let projectPageClasses;
+  let contactPageClasses;
+
+  if (props.component === 'sidedrawer') {
+    aboutPageClasses =
+      projectPageClasses =
+      contactPageClasses =
+        `${styles.page} ${styles.sidedrawer}`;
+  }
+
+  if (props.component === 'footer') {
+    aboutPageClasses =
+      projectPageClasses = `${styles.page} ${styles.footer} ${styles.pipe}`;
+    contactPageClasses = `${styles.page} ${styles.footer}`;
+  }
+
+  return (
+    <Fragment>
+      <Link to="/about">
+        <li className={aboutPageClasses}>ABOUT</li>
+      </Link>
+      <Link to="/projects">
+        <li className={projectPageClasses}>PROJECTS</li>
+      </Link>
+      <Link to="/contact">
+        <li className={contactPageClasses}>CONTACT</li>
+      </Link>
+    </Fragment>
+  );
 };
 
 export default PageList;
