@@ -4,7 +4,6 @@ import useScreenPosition from '../../../hooks/use-scroll-position';
 import { HeaderContext } from '../../../store/header-context';
 import { ReactComponent as Logo } from '../../../assets/images/moss-design-logo2.svg';
 import BurgerMenu from './BurgerMenu';
-
 import styles from './Nav.module.css';
 
 const Nav = () => {
@@ -43,15 +42,15 @@ const Nav = () => {
 
   if (headerCtx.isNavTransparent && !headerCtx.isNavSticky) {
     navClasses = `${styles.nav}`;
-    logoClasses = `${styles['nav-logo']} ${styles['grey-fill']}`;
+    logoClasses = `${styles.logo} ${styles['grey-fill']}`;
   }
   if (!headerCtx.isNavTransparent && headerCtx.isNavSticky) {
     navClasses = `${styles.nav} ${styles.sticky} ${styles['nav-background']}`;
-    logoClasses = `${styles['nav-logo']} ${styles['black-fill']}`;
+    logoClasses = `${styles.logo} ${styles['black-fill']}`;
   }
   if (!headerCtx.isNavTransparent && !headerCtx.isNavSticky) {
     navClasses = `hidden ${styles.nav} ${styles.sticky}`;
-    logoClasses = `${styles['nav-logo']} ${styles['black-fill']}`;
+    logoClasses = `${styles.logo} ${styles['black-fill']}`;
   }
 
   return (

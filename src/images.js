@@ -1,6 +1,8 @@
 import bathroomEnsuite from './assets/images/bathroom-ensuite.jpg';
 import livingRoom from './assets/images/living-room.jpg';
-import frontViewRendering from './assets/images/front-view-rendering.jpg';
+// import frontViewRendering from './assets/images/front-view-rendering.jpg';
+// import frontViewRendering from './assets/images/front-view-rendering2.png';
+import frontViewRendering from './assets/images/front-view-rendering-square.png';
 import rearViewRendering from './assets/images/rear-view-rendering.jpg';
 import bathroom from './assets/images/bathroom.JPG';
 import frontDoor from './assets/images/front-door.jpg';

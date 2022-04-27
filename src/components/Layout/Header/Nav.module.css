@@ -3,9 +3,11 @@
   justify-content: space-between;
   align-items: center;
   z-index: 20;
-  height: 12vh;
-  padding: 0.5rem;
+  width: 100vw;
+  height: 10vh;
+  padding: calc(12vh * 0.05) 5%;
   transition: visibility 1.5s ease-out, background-color 1.5s ease-out, opacity 1.5s ease-out;
+  background-color: #fcf3ec;
 }
 
 .nav-background {
@@ -21,9 +23,13 @@
   top: 0;
 }
 
-.nav-logo {
-  width: 120px;
-  height: auto;
+.logo {
+  /* display: flex;
+  align-items: center; */
+  width: auto;
+  min-width: 7.5rem;
+  /* max-width: 7.5rem; */
+  height: 8vh;
 }
 
 .grey-fill {
@@ -33,3 +39,9 @@
 .black-fill {
   fill: black;
 }
+
+
+@media (min-width: 20rem) {
+  
+}
+
