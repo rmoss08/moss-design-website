@@ -1,13 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Amarante&family=Fira+Sans&family=Lato:wght@300;400&family=Open+Sans:wght@300&display=swap');
+.about-page {
+    display: grid;
+    grid-template-rows: 1fr;
+    row-gap: 2rem;
+}
 
 .profile-pic {
     display: block;
     border-radius: 50%;
     width: 80vw;
-    margin: 2rem auto;
+    margin: 0 auto;
 }
 
 .job-title {
     font-style: italic;
     margin-top: 0.5rem;
+}
+
+@media (min-width: 540px) {
+    .about-page {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+
+    .profile-pic {
+        width: 30vw;
+        columns: 1 /3;
+    }
+    
 }
