@@ -1,24 +1,25 @@
-.burger-menu {
-    /* margin-right: 3rem; */
-}
-
 .line1,
 .line2,
 .line3 {
-    background-color: black;
-    width: 32px;
-    height: 1px;
-    margin: 0.5rem 0;
+  background-color: black;
+  width: 32px;
+  height: 1px;
+  margin: 0.5rem 0;
 }
 
-/* .animation.line2 {
-    visibility: hidden;
+.line1,
+.line3 {
+    transition: transform 300ms ease-out, opactiy 300ms ease-out;
 }
 
-.animation.line1 {
-    transform: rotate(45deg) translateY(0.75rem) translateX(0.75rem);
+.close.line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-.animation.line3 {
-    transform: rotate(135deg); 
-} */
+.close.line2 {
+    opacity: 0;
+}
+
+.close.line3 {
+  transform: rotate(45deg) translate(-6px, -8px);
+}

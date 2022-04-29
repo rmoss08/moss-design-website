@@ -1,6 +1,6 @@
 import Layout from '../components/Layout/Layout';
 import BackgroundImage from '../components/BackgroundImage';
-import rearViewRendering from './assets/images/rear-view-rendering.jpg';
+import rearViewRendering from '../assets/images/rear-view-rendering.jpg';
 import { ProjectGalleryDrawings, ProjectGalleryRednerings } from '../images';
 import Gallery from '../components/Gallery';
 import styles from './ProjectPage.module.css';

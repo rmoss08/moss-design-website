@@ -1,19 +1,29 @@
 import { useContext, useState } from 'react';
-import { HeaderContext} from '../../../store/header-context'
+import { HeaderContext } from '../../../store/header-context';
 
 import styles from './BurgerMenu.module.css';
 
 const BurgerMenu = (props) => {
-  const [line1Classes, setLine1Classes] = useState(`${styles.line1}`);  
-  const [line2Classes, setLine2Classes] = useState(`${styles.line2}`);  
-  const [line3Classes, setLine3Classes] = useState(`${styles.line3}`);
+  let line1Classes;
+  let line2Classes;
+  let line3Classes;
 
   const headerCtx = useContext(HeaderContext);
 
   const burgerMenuClickHandler = () => {
     headerCtx.toggleSideDrawer();
   };
-  
+
+  if (headerCtx.isSideDrawerShown) {
+    line1Classes = `${styles.close} ${styles.line1}`;
+    line2Classes = `${styles.close} ${styles.line2}`;
+    line3Classes = `${styles.close} ${styles.line3}`;
+  } else {
+    line1Classes = `${styles.line1}`;
+    line2Classes = `${styles.line2}`;
+    line3Classes = `${styles.line3}`;
+  }
+
   return (
     <div className={styles['burger-menu']} onClick={burgerMenuClickHandler}>
       <div className={line1Classes}></div>
