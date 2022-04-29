@@ -7,7 +7,6 @@
   height: 10vh;
   padding: calc(10vh * 0.05) 8%;
   transition: visibility 1.5s ease-out, background-color 1.5s ease-out, opacity 1.5s ease-out;
-  background-color: #fcf3ec;
 }
 
 .nav-background {

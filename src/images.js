@@ -11,7 +11,7 @@ import basementFloorPlan from './assets/images/floor-plan-basement.png';
 import mainLevelFloorPlan from './assets/images/floor-plan-main-level.png';
 import upperLevelFloorPlan from './assets/images/floor-plan-upper-level.png';
 
-export const HeaderImages = [
+export const BackgroundImages = [
   {
     id: 'front-view-rendering',
     src: frontViewRendering,

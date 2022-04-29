@@ -1,11 +1,11 @@
 import Layout from '../components/Layout/Layout';
-import HeaderImage from '../components/HeaderImage';
-import { HeaderImages, ProjectGalleryDrawings, ProjectGalleryRednerings } from '../images';
+import BackgroundImage from '../components/BackgroundImage';
+import { BackgroundImages, ProjectGalleryDrawings, ProjectGalleryRednerings } from '../images';
 import Gallery from '../components/Gallery';
 import styles from './ProjectPage.module.css';
 
 const ProjectPage = () => {
-  const rearViewRendering = HeaderImages[1];
+  const rearViewRendering = BackgroundImages[1];
 
   const introText = (
     <p className="margin">
@@ -24,7 +24,7 @@ const ProjectPage = () => {
 
   return (
     <Layout>
-      <HeaderImage
+      <BackgroundImage
         imageSrc={rearViewRendering.src}
         imageAlt={rearViewRendering.alt}
       />
