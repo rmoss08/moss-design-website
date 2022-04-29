@@ -43,7 +43,9 @@ export const HeaderContextProvider = (props) => {
   };
 
   const addNavTransparency = () => {
-    setIsNavTransparent(true);
+    if (!isMenuShown){
+      setIsNavTransparent(true);
+    }
   };
 
   const removeNavTransparency = () => {
@@ -55,7 +57,9 @@ export const HeaderContextProvider = (props) => {
   };
 
   const removeNavSticky = () => {
-    setIsNavSticky(false);
+    if (!isMenuShown){
+      setIsNavSticky(false);
+    }
   };
 
   const unlockNav = () => {
