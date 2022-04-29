@@ -1,12 +1,11 @@
 import Layout from '../components/Layout/Layout';
 import BackgroundImage from '../components/BackgroundImage';
-import { BackgroundImages, ProjectGalleryDrawings, ProjectGalleryRednerings } from '../images';
+import rearViewRendering from './assets/images/rear-view-rendering.jpg';
+import { ProjectGalleryDrawings, ProjectGalleryRednerings } from '../images';
 import Gallery from '../components/Gallery';
 import styles from './ProjectPage.module.css';
 
 const ProjectPage = () => {
-  const rearViewRendering = BackgroundImages[1];
-
   const introText = (
     <p className="margin">
       Those close to the oligarch insist they do not expect Abramovich to be
@@ -24,10 +23,7 @@ const ProjectPage = () => {
 
   return (
     <Layout>
-      <BackgroundImage
-        imageSrc={rearViewRendering.src}
-        imageAlt={rearViewRendering.alt}
-      />
+      <BackgroundImage src={rearViewRendering} />
       <h2 className={styles.location}>WEST VANCOUVER, BC</h2>
       {introText}
       <div className="margin">
