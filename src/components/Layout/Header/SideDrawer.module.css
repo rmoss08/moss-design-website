@@ -2,19 +2,35 @@
     visibility: hidden;
     width: 100vw;
     position: fixed;
-    top: -12vh;
+    top: -10vh;
     z-index: 5;
     background: #999999bb;
-    transition: visibility 1.5s linear, top 1.5s ease-out;
+    transition: visibility 1.5s linear, top 1.5s ease-in, right 1.5s ease-in;
 }
 
-.show-sidedrawer {
+.show {
     visibility: visible;
-    top: 12vh;
+    top: 10vh;
 }
 
 .pagelist-wrapper {
+    position: relative;
+    top: 30%;
     text-align: center;
     margin: 2rem auto;
     padding: 0;
+}
+
+
+@media (min-width: 550px) {
+ .sidedrawer {
+     width: 50vw;
+     height: 100vh;
+     top: 10vh;
+     right: -30vw
+ }
+
+ .show {
+     right: 0;
+ }
 }
