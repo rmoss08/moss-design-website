@@ -1,4 +1,4 @@
-.sidedrawer {
+.menu {
     visibility: hidden;
     width: 100vw;
     position: fixed;
@@ -23,7 +23,7 @@
 
 
 @media (min-width: 550px) {
- .sidedrawer {
+ .menu {
      width: 50vw;
      height: 100vh;
      top: 10vh;

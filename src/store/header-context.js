@@ -4,7 +4,7 @@ export const HeaderContext = React.createContext({
   isNavTransparent: true,
   isNavSticky: false,
   isNavLocked: false,
-  isSideDrawerShown: false,
+  isMenuShown: false,
   initHeader: () => {},
   addNavTransparency: () => {},
   removeNavTransparency: () => {},
@@ -12,14 +12,14 @@ export const HeaderContext = React.createContext({
   removeNavSticky: () => {},
   unlockNav: () => {},
   lockNav: () => {},
-  toggleSideDrawer: () => {},
+  toggleMenu: () => {},
 });
 
 export const HeaderContextProvider = (props) => {
   const [isNavTransparent, setIsNavTransparent] = useState(false);
   const [isNavSticky, setIsNavSticky] = useState(false);
   const [isNavLocked, setIsNavLocked] = useState(false);
-  const [isSideDrawerShown, setIsSideDrawerShown] = useState(false);
+  const [isMenuShown, setIsMenuShown] = useState(false);
 
   const initHeader = (
     {
@@ -33,12 +33,12 @@ export const HeaderContextProvider = (props) => {
     setIsNavTransparent(transparency);
     setIsNavSticky(sticky);
     setIsNavLocked(lock);
-    setIsSideDrawerShown(sidedrawer);
+    setIsMenuShown(sidedrawer);
     console.table({
       isNavTransparent,
       isNavSticky,
       isNavLocked,
-      isSideDrawerShown,
+      isMenuShown,
     });
   };
 
@@ -66,8 +66,8 @@ export const HeaderContextProvider = (props) => {
     setIsNavLocked(true);
   };
 
-  const toggleSideDrawer = () => {
-    setIsSideDrawerShown((prevState) => {
+  const toggleMenu = () => {
+    setIsMenuShown((prevState) => {
       return !prevState;
     });
   };
@@ -76,7 +76,7 @@ export const HeaderContextProvider = (props) => {
     isNavTransparent: isNavTransparent,
     isNavSticky: isNavSticky,
     isNavLocked: isNavLocked,
-    isSideDrawerShown: isSideDrawerShown,
+    isMenuShown: isMenuShown,
     initHeader,
     addNavTransparency,
     removeNavTransparency,
@@ -84,7 +84,7 @@ export const HeaderContextProvider = (props) => {
     removeNavSticky,
     unlockNav,
     lockNav,
-    toggleSideDrawer,
+    toggleMenu,
   };
 
   return (

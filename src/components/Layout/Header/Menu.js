@@ -2,28 +2,28 @@ import PageList from '../PageList';
 import { ReactComponent as Logo } from '../../../assets/images/moss-design-logo.svg';
 import { useContext } from 'react';
 import { HeaderContext } from '../../../store/header-context';
-import styles from './SideDrawer.module.css';
+import styles from './Menu.module.css';
 import { Link } from 'react-router-dom';
 
-const SideDrawer = () => {
+const Menu = () => {
   const headerCtx = useContext(HeaderContext);
-  const showSideDrawer = headerCtx.isSideDrawerShown;
+  const showMenu = headerCtx.isMenuShown;
 
-  let sideDrawerClasses;
+  let menuClasses;
 
-  if (showSideDrawer) {
-    sideDrawerClasses = `${styles.show} ${styles.sidedrawer}`;
+  if (showMenu) {
+    menuClasses = `${styles.show} ${styles.menu}`;
   } else {
-    sideDrawerClasses = `${styles.sidedrawer}`;
+    menuClasses = `${styles.menu}`;
   }
 
   return (
-    <div className={sideDrawerClasses}>
+    <div className={menuClasses}>
       <ul className={styles['pagelist-wrapper']}>
-        <PageList component="sidedrawer" />
+        <PageList component="menu" />
       </ul>
     </div>
   );
 };
 
-export default SideDrawer;
+export default Menu;

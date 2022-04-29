@@ -8,11 +8,11 @@ const PageList = (props) => {
   let projectPageClasses;
   let contactPageClasses;
 
-  if (props.component === 'sidedrawer') {
+  if (props.component === 'menu') {
     aboutPageClasses =
       projectPageClasses =
       contactPageClasses =
-        `${styles.page} ${styles.sidedrawer}`;
+        `${styles.page} ${styles.menu}`;
   }
 
   if (props.component === 'footer') {

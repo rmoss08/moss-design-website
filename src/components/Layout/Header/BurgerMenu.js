@@ -11,10 +11,10 @@ const BurgerMenu = (props) => {
   const headerCtx = useContext(HeaderContext);
 
   const burgerMenuClickHandler = () => {
-    headerCtx.toggleSideDrawer();
+    headerCtx.toggleMenu();
   };
 
-  if (headerCtx.isSideDrawerShown) {
+  if (headerCtx.isMenuShown) {
     line1Classes = `${styles.close} ${styles.line1}`;
     line2Classes = `${styles.close} ${styles.line2}`;
     line3Classes = `${styles.close} ${styles.line3}`;

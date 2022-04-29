@@ -1,16 +1,16 @@
 import { Fragment, useContext } from 'react';
 import { HeaderContext } from '../../../store/header-context';
 import Nav from './Nav';
-import SideDrawer from './SideDrawer';
+import Menu from './Menu';
 
 const Header = () => {
     const headerCtx = useContext(HeaderContext);
-    const showSideDrawer = headerCtx.isSideDrawerShown;
+    const showMenu = headerCtx.isMenuShown;
 
     return (
     <Fragment>
       <Nav />
-      <SideDrawer />
+      <Menu />
     </Fragment>
   );
 };
