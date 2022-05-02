@@ -53,10 +53,10 @@ const Nav = () => {
     logoClasses = `${styles.logo} ${styles['black-fill']}`;
   }
 
-  console.log('isNavTransparent');
-  console.log(headerCtx.isNavTransparent);
-  console.log('isNavSticky');
-  console.log(headerCtx.isNavSticky);
+  // console.log('isNavTransparent');
+  // console.log(headerCtx.isNavTransparent);
+  // console.log('isNavSticky');
+  // console.log(headerCtx.isNavSticky);
   return (
     <nav className={navClasses}>
       <Link to="/">

@@ -14,7 +14,7 @@ export const HomePageGalleryImages = [
   { id: 'living-room', src: livingRoom, alt: 'Living room' },
 ];
 
-export const ProjectGalleryRednerings = [
+export const ProjectGalleryRenderings = [
   { id: 'front-door', src: frontDoor, alt: 'Front door' },
   { id: 'master-bedroom', src: masterBedroom, alt: 'Master bedroom' },
   { id: 'bathroom', src: bathroom, alt: 'Bathroom' },

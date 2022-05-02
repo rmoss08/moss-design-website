@@ -1,9 +1,18 @@
 import Layout from '../components/Layout/Layout';
 import BackgroundImage from '../components/BackgroundImage';
 import rearViewRendering from '../assets/images/rear-view-rendering.jpg';
-import { ProjectGalleryDrawings, ProjectGalleryRednerings } from '../images';
+import { ProjectGalleryDrawings, ProjectGalleryRenderings } from '../images';
 import Gallery from '../components/Gallery';
 import styles from './ProjectPage.module.css';
+
+const gallery1 = ProjectGalleryRenderings.slice(0,2);
+const gallery2 = ProjectGalleryRenderings.slice(2,4);
+const gallery3 = ProjectGalleryRenderings.slice(4);
+const gallery4 = ProjectGalleryDrawings.slice(0,2);
+const gallery5 = ProjectGalleryDrawings.slice(2);
+
+
+
 
 const ProjectPage = () => {
   const introText = (
@@ -28,11 +37,15 @@ const ProjectPage = () => {
       {introText}
       <div className="margin">
         <h2>RENDERINGS</h2>
-        <Gallery images={ProjectGalleryRednerings} />
+        <Gallery id='pp-gallery-1' images={gallery1} />
+        <Gallery id='pp-gallery-2' images={gallery2} />
+        <Gallery id='pp-gallery-3' images={gallery3} />
       </div>
       <div className="margin">
         <h2>DRAWINGS</h2>
-        <Gallery images={ProjectGalleryDrawings} />
+        <Gallery id='pp-gallery-4' images={gallery4} />
+        <Gallery id='pp-gallery-5' images={gallery5} />
+
       </div>
     </Layout>
   );
