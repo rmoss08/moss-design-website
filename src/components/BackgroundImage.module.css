@@ -1,95 +1,33 @@
 .background-container {
-    width: 100vw;
-    height: 90vh;
-    margin-bottom: 4rem;
+  width: 100vw;
+  height: 90vh;
+  margin-bottom: 4rem;
 }
-
 .background-image {
-    position: absolute;
-    top: 0;
-    z-index: -2;
-    width: 100vw;
-    height: 100vh;
-    background-size: 100vh 100vh;
-    background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  z-index: -2;
+  width: 110%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-
 .span-animation {
-    animation-duration: 10s; 
-    animation-iteration-count: infinite; 
-    animation-timing-function: ease-in-out;
-    animation-name: span;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-name: span;
 }
-
 @keyframes span {
-    0% {
-        background-position: 10% 10%;
-    }
-    
-    50% {
-        background-position: 60% 10%;
-    }    
-    100% {
-        background-position: 10% 10%;
-    }
-}
+  0% {
+    transform: translateX(0%);
+  }
 
-@media (min-width: 550px) {
-    .background-image {
-        background-size: 150vh 150vh;
-        background-position: 0% 40%;
-    }
-
-    @keyframes span {
-        0% {
-            background-position: 0% 40%;
-        }
-        
-        50% {
-            background-position: 30% 40%;
-        }    
-        100% {
-            background-position: 0% 40%;
-        }
-    }
-}
-
-@media (min-width: 800px) {
-    .background-image {
-        background-size: 110vw 110vw;
-        background-position: 0% 40%;
-    }
-
-    @keyframes span {
-        0% {
-            background-position: 0% 40%;
-        }
-        
-        50% {
-            background-position: 30% 40%;
-        }    
-        100% {
-            background-position: 0% 40%;
-        }
-    }
-}
-
-@media (min-width: 1200px) {
-    .background-image {
-        background-size: 110vw 110vw;
-        background-position: 0% 55%;
-    }
-
-    @keyframes span {
-        0% {
-            background-position: 0% 55%;
-        }
-        
-        50% {
-            background-position: 30% 55%;
-        }    
-        100% {
-            background-position: 0% 55%;
-        }
-    }
+  50% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
