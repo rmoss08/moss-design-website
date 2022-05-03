@@ -1,15 +1,16 @@
 import Layout from '../components/Layout/Layout';
-import { useContext, useEffect } from 'react';
-import { HeaderContext } from '../store/header-context';
-import LoadingSpinner from '../components/LoadingSpinner';
+import { useEffect } from 'react';
+import { navActions } from '../store/nav-slice';
+import { useDispatch } from 'react-redux';
 
 const NotFoundPage = () => {
-  const headerCtx = useContext(HeaderContext);
+  const dispatch = useDispatch();
   
-  useEffect(()=> {
-    headerCtx.lockNav();
-    // headerCtx.removeNavTransparency();
-  }, [])
+  useEffect(() => {
+    dispatch(navActions.lock());  
+    dispatch(navActions.removeTransparency());  
+    dispatch(navActions.addSticky());  
+  }, []);
 
   return (
     <Layout>

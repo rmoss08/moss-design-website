@@ -5,6 +5,8 @@ import profileImage from '../assets/images/chloe.jpg';
 import styles from './AboutPage.module.css';
 import { useContext, useLayoutEffect, useEffect } from 'react';
 import { HeaderContext } from '../store/header-context';
+import { navActions } from '../store/nav-slice';
+import { useDispatch } from 'react-redux';
 
 const aboutText = (
   <p>
@@ -30,11 +32,12 @@ const aboutText = (
 );
 
 const AboutPage = () => {
-  const headerCtx = useContext(HeaderContext);
-
+  const dispatch = useDispatch();
+  
   useEffect(() => {
-    headerCtx.lockNav();
-    // headerCtx.removeNavTransparency();
+    dispatch(navActions.lock());  
+    dispatch(navActions.removeTransparency());  
+    dispatch(navActions.addSticky());  
   }, []);
 
   return (
