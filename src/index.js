@@ -5,14 +5,18 @@ import { HeaderContextProvider } from './store/header-context';
 
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store/index';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <HeaderContextProvider>
-        <App />
-      </HeaderContextProvider>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <HeaderContextProvider>
+          <App />
+        </HeaderContextProvider>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
