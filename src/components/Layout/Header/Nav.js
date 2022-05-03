@@ -8,32 +8,34 @@ import styles from './Nav.module.css';
 
 const Nav = () => {
   const headerCtx = useContext(HeaderContext);
-
+  
   const displayHeight = document.querySelector('html').clientHeight;
   const yPos = useScreenPosition().y;
   
-  useLayoutEffect(() => {
-    let isScrolling = true;
-    
-    const navHeight = document.querySelector('nav').clientHeight;
-    const scrollYLimit = displayHeight - navHeight;
+  useEffect(() => {
+    let isMounted = true;
 
-    if (!headerCtx.isNavLocked) {
-      if (yPos === 0) {
-        headerCtx.addNavTransparency();
+    if (isMounted) {
+      const navHeight = document.querySelector('nav').clientHeight;
+      const scrollYLimit = displayHeight - navHeight;
+
+      if (!headerCtx.isNavLocked) {
+        if (yPos === 0) {
+          headerCtx.addNavTransparency();
+          headerCtx.removeNavSticky();
+        }
+      }
+      if (yPos > 0 && yPos < scrollYLimit) {
+        headerCtx.removeNavTransparency();
+        headerCtx.addNavSticky();
+      }
+      if (yPos > scrollYLimit) {
         headerCtx.removeNavSticky();
       }
     }
-    if (yPos > 0 && yPos < scrollYLimit) {
-      headerCtx.removeNavTransparency();
-      headerCtx.addNavSticky();
-    }
-    if (yPos > scrollYLimit) {
-      headerCtx.removeNavSticky();
-    }
 
     return () => {
-      isScrolling = false;
+      isMounted = false;
     };
   }, [yPos]);
 

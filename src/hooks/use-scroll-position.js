@@ -18,7 +18,6 @@ const getScreenPosition = () => {
 };
 
 const useScreenPosition = () => {
-  // const [isScrolling, setIsScrolling] = useState(false);
   const [screenPosition, setScreenPosition] = useState({
     x: 0,
     y: 0,

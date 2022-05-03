@@ -5,7 +5,6 @@ import Menu from './Menu';
 
 const Header = () => {
     const headerCtx = useContext(HeaderContext);
-    const showMenu = headerCtx.isMenuShown;
 
     return (
     <Fragment>
