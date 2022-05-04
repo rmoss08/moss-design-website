@@ -1,20 +1,21 @@
-import { useContext, useState } from 'react';
-import { HeaderContext } from '../../../store/header-context';
+import { useDispatch, useSelector } from 'react-redux';
+import { menuActions } from '../../../store/menu-slice';
 
 import styles from './BurgerMenu.module.css';
 
 const BurgerMenu = (props) => {
+  const dispatch = useDispatch(menuActions);
+  const isMenuVisible = useSelector(state => state.menu.isVisible)
+  
   let line1Classes;
   let line2Classes;
   let line3Classes;
 
-  const headerCtx = useContext(HeaderContext);
-
   const burgerMenuClickHandler = () => {
-    headerCtx.toggleMenu();
+    dispatch(menuActions.toggleMenu());
   };
 
-  if (headerCtx.isMenuShown) {
+  if (isMenuVisible) {
     line1Classes = `${styles.close} ${styles.line1}`;
     line2Classes = `${styles.close} ${styles.line2}`;
     line3Classes = `${styles.close} ${styles.line3}`;
