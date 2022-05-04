@@ -1,6 +1,9 @@
 import PageList from '../PageList';
 import styles from './Menu.module.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { menuActions } from '../../../store/menu-slice';
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Menu = () => {
   const isMenuVisible = useSelector((state) => state.menu.isVisible);
@@ -12,6 +15,13 @@ const Menu = () => {
   } else {
     menuClasses = `${styles.menu}`;
   }
+
+  const pathname = useLocation();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(menuActions.hideMenu())
+  }, [pathname])
 
   return (
     <div className={menuClasses}>

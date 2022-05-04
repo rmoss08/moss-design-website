@@ -5,11 +5,11 @@ import { useDispatch } from 'react-redux';
 
 const NotFoundPage = () => {
   const dispatch = useDispatch();
-  
+  dispatch(navActions.changeTransparencySetting(false));
+
   useEffect(() => {
-    dispatch(navActions.lock());  
     dispatch(navActions.removeTransparency());  
-    dispatch(navActions.addSticky());  
+    dispatch(navActions.lock());  
   }, []);
 
   return (

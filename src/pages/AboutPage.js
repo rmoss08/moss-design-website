@@ -6,7 +6,7 @@ import styles from './AboutPage.module.css';
 import { useContext, useLayoutEffect, useEffect } from 'react';
 import { HeaderContext } from '../store/header-context';
 import { navActions } from '../store/nav-slice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 const aboutText = (
   <p>
@@ -33,11 +33,12 @@ const aboutText = (
 
 const AboutPage = () => {
   const dispatch = useDispatch();
+  const isNavLocked = useSelector((state) => state.nav.isLocked);
+  dispatch(navActions.changeTransparencySetting(false));
   
   useEffect(() => {
-    dispatch(navActions.lock());  
-    dispatch(navActions.removeTransparency());  
-    dispatch(navActions.addSticky());  
+    dispatch(navActions.removeTransparency());
+    dispatch(navActions.lock());
   }, []);
 
   return (

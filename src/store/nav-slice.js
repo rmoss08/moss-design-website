@@ -2,19 +2,27 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const navSlice = createSlice({
   name: 'nav',
-  initialState: { isTransparent: true, isSticky: false, isLocked: false },
+  initialState: {
+    isTransparencyPossible: true,
+    isTransparent: true,
+    isVisible: true,
+    isLocked: false,
+  },
   reducers: {
+    changeTransparencySetting(state, action) {
+      state.isTransparencyPossible = action.payload;
+    },
     addTransparency(state, action) {
       state.isTransparent = true;
     },
     removeTransparency(state) {
       state.isTransparent = false;
     },
-    addSticky(state) {
-      state.isSticky = true;
+    showNav(state) {
+      state.isVisible = true;
     },
-    removeSticky(state) {
-      state.isSticky = false;
+    hideNav(state) {
+      state.isVisible = false;
     },
     lock(state) {
       state.isLocked = true;
@@ -22,6 +30,11 @@ const navSlice = createSlice({
     unlock(state) {
       state.isLocked = false;
     },
+    // init(state) {
+    //   state.isTransparent = true;
+    //   state.isVisible = true;
+    //   state.isLocked = false;
+    // },
   },
 });
 

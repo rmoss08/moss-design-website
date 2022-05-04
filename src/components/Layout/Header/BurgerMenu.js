@@ -1,11 +1,14 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { menuActions } from '../../../store/menu-slice';
+import { navActions } from '../../../store/nav-slice';
 
 import styles from './BurgerMenu.module.css';
 
-const BurgerMenu = (props) => {
+const BurgerMenu = () => {
   const dispatch = useDispatch(menuActions);
   const isMenuVisible = useSelector(state => state.menu.isVisible)
+  const isNavLocked = useSelector(state => state.nav.isLocked)
+  const isNavTransPossible = useSelector(state => state.nav.isTransparencyPossible)
   
   let line1Classes;
   let line2Classes;
@@ -13,6 +16,13 @@ const BurgerMenu = (props) => {
 
   const burgerMenuClickHandler = () => {
     dispatch(menuActions.toggleMenu());
+    if (!isNavLocked) {
+      dispatch(navActions.lock());
+    }
+    if (isNavLocked && isNavTransPossible) {
+      dispatch(navActions.unlock());
+    }
+    
   };
 
   if (isMenuVisible) {

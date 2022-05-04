@@ -4,6 +4,8 @@ import rearViewRendering from '../assets/images/rear-view-rendering.jpg';
 import { ProjectGalleryDrawings, ProjectGalleryRenderings } from '../images';
 import Gallery from '../components/Gallery';
 import styles from './ProjectPage.module.css';
+import { useDispatch } from 'react-redux';
+import { navActions } from '../store/nav-slice';
 
 const gallery1 = ProjectGalleryRenderings.slice(0,2);
 const gallery2 = ProjectGalleryRenderings.slice(2,4);
@@ -15,6 +17,10 @@ const gallery5 = ProjectGalleryDrawings.slice(2);
 
 
 const ProjectPage = () => {
+  const dispatch = useDispatch();
+  dispatch(navActions.changeTransparencySetting(true));
+  dispatch(navActions.unlock());
+
   const introText = (
     <p className="margin">
       Those close to the oligarch insist they do not expect Abramovich to be

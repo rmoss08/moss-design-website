@@ -4,11 +4,17 @@ import Services from '../components/Services/Services';
 import Gallery from '../components/Gallery';
 import frontViewRendering from '../assets/images/front-view-rendering-square.png';
 import { HomePageGalleryImages } from '../images';
+import { useDispatch } from 'react-redux';
+import { navActions } from '../store/nav-slice';
 
 const gallery1 = HomePageGalleryImages.slice(0, 2);
 const gallery2 = HomePageGalleryImages.slice(2, 4);
 
 const HomePage = () => {
+  const dispatch = useDispatch();
+  dispatch(navActions.changeTransparencySetting(true));
+  dispatch(navActions.unlock());
+
   return (
     <Layout>
       <BackgroundImage src={frontViewRendering} />
