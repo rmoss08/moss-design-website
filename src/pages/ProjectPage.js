@@ -4,8 +4,9 @@ import rearViewRendering from '../assets/images/rear-view-rendering.jpg';
 import { ProjectGalleryDrawings, ProjectGalleryRenderings } from '../images';
 import Gallery from '../components/Gallery';
 import styles from './ProjectPage.module.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { navActions } from '../store/nav-slice';
+import { useEffect } from 'react';
 
 const gallery1 = ProjectGalleryRenderings.slice(0,2);
 const gallery2 = ProjectGalleryRenderings.slice(2,4);
@@ -13,13 +14,24 @@ const gallery3 = ProjectGalleryRenderings.slice(4);
 const gallery4 = ProjectGalleryDrawings.slice(0,2);
 const gallery5 = ProjectGalleryDrawings.slice(2);
 
-
-
-
 const ProjectPage = () => {
+  const isNavTransparent = useSelector((state) => state.nav.isTransparent);
+  const isNavVisible = useSelector((state) => state.nav.isVisible);
+  const isNavLocked = useSelector((state) => state.nav.isLocked);
+
   const dispatch = useDispatch();
-  dispatch(navActions.changeTransparencySetting(true));
-  dispatch(navActions.unlock());
+  
+  useEffect(() => {
+    if (!isNavTransparent) {
+      dispatch(navActions.addTransparency());
+    }
+    if (!isNavVisible) { 
+      dispatch(navActions.showNav())
+    }
+    if (isNavLocked) {
+      dispatch(navActions.unlock());
+    }
+  }, []);
 
   const introText = (
     <p className="margin">

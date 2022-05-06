@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { menuActions } from '../../../store/menu-slice';
 import { navActions } from '../../../store/nav-slice';
@@ -14,14 +15,18 @@ const BurgerMenu = () => {
   let line2Classes;
   let line3Classes;
 
+  // useEffect(() => {
+  // }, [isNavLocked, isNavTransPossible]);
+
   const burgerMenuClickHandler = () => {
-    dispatch(menuActions.toggleMenu());
-    if (!isNavLocked) {
-      dispatch(navActions.lock());
-    }
-    if (isNavLocked && isNavTransPossible) {
-      dispatch(navActions.unlock());
-    }
+      dispatch(menuActions.toggleMenu());
+      // if (!isNavLocked) {
+      //   dispatch(navActions.lock());
+      // }
+      // if (isNavLocked && isNavTransPossible) {
+      //   dispatch(navActions.unlock());
+      // }
+      
     
   };
 

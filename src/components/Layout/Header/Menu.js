@@ -16,11 +16,13 @@ const Menu = () => {
     menuClasses = `${styles.menu}`;
   }
 
-  const pathname = useLocation();
   const dispatch = useDispatch();
+  const pathname = useLocation();
 
   useEffect(() => {
-    dispatch(menuActions.hideMenu())
+    if (isMenuVisible) {
+      dispatch(menuActions.hideMenu())
+    }
   }, [pathname])
 
   return (

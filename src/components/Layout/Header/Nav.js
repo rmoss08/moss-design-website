@@ -9,7 +9,6 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const Nav = () => {
   const dispatch = useDispatch();
-  // dispatch(navActions.init());
   
   const isNavTransparent = useSelector((state) => state.nav.isTransparent);
   const isNavVisible = useSelector((state) => state.nav.isVisible);
@@ -39,7 +38,7 @@ const Nav = () => {
             dispatch(navActions.showNav());
           }
         }
-        if (yPos > scrollYLimit) {
+        if (yPos > scrollYLimit && isNavVisible) {
           dispatch(navActions.hideNav());
         }
       }

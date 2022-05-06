@@ -3,15 +3,11 @@ import { createSlice } from '@reduxjs/toolkit';
 const navSlice = createSlice({
   name: 'nav',
   initialState: {
-    isTransparencyPossible: true,
     isTransparent: true,
     isVisible: true,
     isLocked: false,
   },
   reducers: {
-    changeTransparencySetting(state, action) {
-      state.isTransparencyPossible = action.payload;
-    },
     addTransparency(state, action) {
       state.isTransparent = true;
     },
@@ -30,11 +26,6 @@ const navSlice = createSlice({
     unlock(state) {
       state.isLocked = false;
     },
-    // init(state) {
-    //   state.isTransparent = true;
-    //   state.isVisible = true;
-    //   state.isLocked = false;
-    // },
   },
 });
 

@@ -17,13 +17,14 @@ const getScreenPosition = () => {
   return { x: window.scrollX, y: window.scrollY };
 };
 
+
 const useScreenPosition = () => {
   const [screenPosition, setScreenPosition] = useState({
     x: 0,
     y: 0,
   });
 
-  const scrollHandler = (eventType) => {
+  const scrollHandler = () => {
     setTimeout(() => {
       setScreenPosition(getScreenPosition());
     }, 300);

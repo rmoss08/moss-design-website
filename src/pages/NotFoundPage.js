@@ -1,15 +1,27 @@
 import Layout from '../components/Layout/Layout';
 import { useEffect } from 'react';
 import { navActions } from '../store/nav-slice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 const NotFoundPage = () => {
-  const dispatch = useDispatch();
-  dispatch(navActions.changeTransparencySetting(false));
+  const isNavTransparent = useSelector((state) => state.nav.isTransparent);
+  const isNavVisible = useSelector((state) => state.nav.isVisible);
+  const isNavLocked = useSelector((state) => state.nav.isLocked);
 
+  const dispatch = useDispatch();
+  
   useEffect(() => {
-    dispatch(navActions.removeTransparency());  
-    dispatch(navActions.lock());  
+    if (!isNavLocked) {
+      dispatch(navActions.lock());
+    }
+    console.log(isNavTransparent)
+    if (isNavTransparent) {
+      console.log('Removing trans');
+      dispatch(navActions.removeTransparency());
+    }
+    if (!isNavVisible) { 
+      dispatch(navActions.showNav())
+    }
   }, []);
 
   return (
