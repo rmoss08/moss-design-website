@@ -1,35 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Amarante&family=Fira+Sans&family=Lato:wght@300;400&family=Open+Sans:wght@300&display=swap');
 
 .footer {
-    background: #999999bb;
-    font-family: 'Lato', sans-serif;
-    color: white;
-    /* Possible to remove padding */
-    padding: 0.01rem 0;
+  background: #999999bb;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  /* Possible to remove padding */
+  padding: 0.01rem 0;
 }
 
 .footer p {
-    font-weight: 300;
-    font-size: 0.75rem;
+  font-weight: 300;
+  font-size: 0.75rem;
 }
 
 .pagelist-wrapper {
-    /* text-align: center; */
-    margin-bottom: 1rem;
-    padding: 0;
+  /* text-align: center; */
+  margin-bottom: 1rem;
+  padding: 0;
 }
 
-.logo-wrapper {
-    fill: white;
-    width: 120px;
-    height: auto;
-    margin: 1.2rem 0 1rem 0;
+.logo {
+  fill: white;
+  width: 120px;
+  height: auto;
+  margin: 1.2rem 0 1rem 0;
+}
+
+.logo:hover {
+  fill: #5a5858;
 }
 
 .linkedIn {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-.linkedIn:active {
-    color: blue;
+.linkedIn:hover {
+  color: #5a5858;;
 }

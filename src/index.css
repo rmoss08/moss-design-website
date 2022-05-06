@@ -52,6 +52,10 @@ a:hover {
   min-height: 80vh;
 }
 
+.pointer:hover {
+  cursor: pointer;
+}
+
 /* Classes not working as intended */
 .hidden {
   visibility: hidden;

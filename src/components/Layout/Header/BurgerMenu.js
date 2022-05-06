@@ -41,7 +41,7 @@ const BurgerMenu = () => {
   }
 
   return (
-    <div className={styles['burger-menu']} onClick={burgerMenuClickHandler}>
+    <div className={`pointer ${styles['burger-menu']}`} onClick={burgerMenuClickHandler}>
       <div className={line1Classes}></div>
       <div className={line2Classes}></div>
       <div className={line3Classes}></div>

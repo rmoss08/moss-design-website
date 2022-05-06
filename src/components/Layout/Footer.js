@@ -13,7 +13,7 @@ const Footer = () => {
           <PageList component="footer" />
         </ul>
         <Link to='/'>
-                    <div className={styles['logo-wrapper']}>
+                    <div className={styles.logo}>
                         <Logo />
                     </div>
                 </Link>

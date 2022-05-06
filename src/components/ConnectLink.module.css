@@ -9,3 +9,8 @@
     margin: 4rem auto;
     padding: 0.5rem 2rem;
 }
+
+.connect-link:hover {
+    background-color: #5a5858;
+    color: whitesmoke
+}

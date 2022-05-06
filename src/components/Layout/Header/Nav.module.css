@@ -30,6 +30,10 @@
   height: 8vh;
 }
 
+.logo:hover {
+  fill: #5a5858;
+}
+
 .grey-fill {
   fill: #9c9c9c;
 }
