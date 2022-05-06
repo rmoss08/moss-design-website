@@ -3,15 +3,15 @@
     position: absolute;
     width: 80px;
     height: 80px;
-    top: 40%;
-    left: 40%
+    top: calc(50vh - 40px);
+    left: calc(50vw - 40px);
   }
   .loading-spinner div {
     display: inline-block;
     position: absolute;
     left: 8px;
     width: 16px;
-    background-color: white;
+    background-color: #999999bb;
     animation: loading-spinner 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
   }
   .loading-spinner div:nth-child(1) {
