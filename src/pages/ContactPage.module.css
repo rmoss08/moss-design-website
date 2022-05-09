@@ -1,0 +1,23 @@
+.grid {
+    display: grid;
+    row-gap: 2rem;
+}
+
+.house-gif {
+    display: block;
+    border-radius: 50%;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+@media (min-width: 850px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        column-gap: 2rem;
+    }
+
+    .house-gif {
+        width: 30vw;
+    }
+}

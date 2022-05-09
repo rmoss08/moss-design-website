@@ -36,17 +36,17 @@ const AboutPage = () => {
   const isNavLocked = useSelector((state) => state.nav.isLocked);
 
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     if (!isNavLocked) {
       dispatch(navActions.lock());
     }
-    console.log(isNavTransparent)
+    console.log(isNavTransparent);
     if (isNavTransparent) {
       dispatch(navActions.removeTransparency());
     }
-    if (!isNavVisible) { 
-      dispatch(navActions.showNav())
+    if (!isNavVisible) {
+      dispatch(navActions.showNav());
     }
   }, []);
 
@@ -58,7 +58,7 @@ const AboutPage = () => {
           className={styles['profile-pic']}
           alt="Headshot of Chloe Moss"
         />
-        <div className={styles.content}>
+        <div>
           <h1>CHLOE MOSS</h1>
           <h3 className={styles['job-title']}>Architectural Designer</h3>
           {aboutText}

@@ -17,7 +17,7 @@
     margin-top: 0.5rem;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 850px) {
     .about-page {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 2rem;

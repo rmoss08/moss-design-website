@@ -14,11 +14,12 @@
   background-position: center;
 }
 .span-animation {
-  animation-duration: 20s;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-name: span;
 }
+
 @keyframes span {
   0% {
     transform: translateX(0%);
@@ -29,5 +30,11 @@
   }
   100% {
     transform: translateX(0%);
+  }
+}
+
+@media (min-width: 540px) {
+  .span-animation {
+    animation-duration: 20s;
   }
 }
