@@ -1,58 +1,22 @@
 .gallery {
     display: flex;
-    /* justify-content: center; */
     justify-content: space-around;
-    /* justify-content: space-between; */
     align-items: center;
     flex-wrap: wrap;
 }
 
 .gallery img {
-    position:relative;
     margin: 1rem auto;
     width: auto;
+    min-width: 18rem;
     max-width: 40%;
     height: auto;
-}
-
-.left-slidein__animation {
-    transition: ease-in;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-name: right-slidein;
-}
-
-.right-slidein__animation {
-    transition: ease-in;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-name: slidein;
 }
 
 .opacity {
     animation-duration: 3s;
     animation-timing-function: ease-in;
     animation-name: fadein;
-}
-
-@keyframes left-slidein {
-    0% {
-        left: -50vw;
-    }
-
-    100% {
-        left: 0;
-    }
-}
-
-@keyframes right-slidein {
-    0% {
-        right: -50vw;
-    }
-
-    100% {
-        right: 0;
-    }
 }
 
 @keyframes fadein {
