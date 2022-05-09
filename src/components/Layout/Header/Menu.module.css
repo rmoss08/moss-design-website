@@ -23,9 +23,10 @@
 
 
 @media (min-width: 550px) {
- .menu {
-     width: 50vw;
-     height: 100vh;
+    .menu {
+        width: 50vw;
+        max-width: 34rem;
+        height: 100vh;
      top: 10vh;
      right: -30vw
  }

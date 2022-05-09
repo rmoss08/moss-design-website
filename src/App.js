@@ -12,14 +12,14 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 function App() {
   return (
     <Suspense fallback={<LoadingSpinner />}>
+      <Routes>
+        <Route path="/" element={<HomePage />} exact />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/projects" element={<ProjectPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
       <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<HomePage />} exact />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/projects" element={<ProjectPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
     </Suspense>
   );
 }

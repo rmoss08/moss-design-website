@@ -1,6 +1,8 @@
 .gallery {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: center; */
+    justify-content: space-around;
+    /* justify-content: space-between; */
     align-items: center;
     flex-wrap: wrap;
 }
@@ -8,7 +10,8 @@
 .gallery img {
     position:relative;
     margin: 1rem auto;
-    width: 40%;
+    width: auto;
+    max-width: 40%;
     height: auto;
 }
 

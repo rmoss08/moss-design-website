@@ -43,7 +43,6 @@ const AboutPage = () => {
     }
     console.log(isNavTransparent)
     if (isNavTransparent) {
-      console.log('Removing trans');
       dispatch(navActions.removeTransparency());
     }
     if (!isNavVisible) { 

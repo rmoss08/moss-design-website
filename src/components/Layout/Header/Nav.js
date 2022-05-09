@@ -13,7 +13,7 @@ const Nav = () => {
   const isNavTransparent = useSelector((state) => state.nav.isTransparent);
   const isNavVisible = useSelector((state) => state.nav.isVisible);
   const isNavLocked = useSelector((state) => state.nav.isLocked);
-  const isMenuVisible = useSelector((state) => state.menu.isVisible);
+  // const isMenuVisible = useSelector((state) => state.menu.isVisible);
 
   const displayHeight = document.querySelector('html').clientHeight;
   const yPos = useScreenPosition().y;
@@ -21,6 +21,7 @@ const Nav = () => {
   useEffect(() => {
     let isMounted = true;
 
+    // I could try cancelling the dispatches in the clean up function
     if (isMounted) {
       const navHeight = document.querySelector('nav').clientHeight;
       const scrollYLimit = displayHeight - navHeight;
