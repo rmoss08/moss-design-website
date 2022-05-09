@@ -24,15 +24,18 @@ const useScreenPosition = () => {
     y: 0,
   });
 
-  const scrollHandler = () => {
-    setTimeout(() => {
-      setScreenPosition(getScreenPosition());
-    }, 300);
-  };
-
+  let timer; 
+  
   const viewportWidth = getDeviceSize().viewportWidth;
 
   useEffect(() => {
+    
+    const scrollHandler = () => {
+      timer = setTimeout(() => {
+        setScreenPosition(getScreenPosition());
+      }, 300);
+    };
+
     if (viewportWidth < 500) {
       window.addEventListener('touchmove', scrollHandler);
       console.log('add eventListener')
@@ -41,6 +44,7 @@ const useScreenPosition = () => {
       console.log('add eventListener')
     }
     return () => {
+      clearTimeout(timer);
       if (viewportWidth < 500) {
         window.removeEventListener('touchmove', scrollHandler);
         console.log('remove eventListener')
