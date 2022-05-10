@@ -31,6 +31,7 @@ const aboutText = (
 );
 
 const AboutPage = () => {
+  console.log('AboutPage rendered')
   const isNavTransparent = useSelector((state) => state.nav.isTransparent);
   const isNavVisible = useSelector((state) => state.nav.isVisible);
   const isNavLocked = useSelector((state) => state.nav.isLocked);
@@ -48,7 +49,7 @@ const AboutPage = () => {
     if (!isNavVisible) {
       dispatch(navActions.showNav());
     }
-  }, []);
+  }, [isNavLocked, isNavTransparent, isNavVisible]);
 
   return (
     <Layout>

@@ -8,6 +8,8 @@ import { navActions } from '../../../store/nav-slice';
 import { useDispatch, useSelector } from 'react-redux';
 
 const Nav = () => {
+  console.log('Nav rendered')
+
   const dispatch = useDispatch();
   
   const isNavTransparent = useSelector((state) => state.nav.isTransparent);

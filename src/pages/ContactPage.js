@@ -25,7 +25,7 @@ const ContactPage = () => {
     if (!isNavVisible) {
       dispatch(navActions.showNav());
     }
-  }, []);
+  }, [isNavLocked, isNavTransparent, isNavVisible]);
 
   return (
     <Layout>
