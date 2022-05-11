@@ -20,14 +20,12 @@ const BurgerMenu = () => {
 
   const burgerMenuClickHandler = () => {
       dispatch(menuActions.toggleMenu());
-      // if (!isNavLocked) {
-      //   dispatch(navActions.lock());
-      // }
-      // if (isNavLocked && isNavTransPossible) {
-      //   dispatch(navActions.unlock());
-      // }
-      
-    
+      if (!isNavLocked) {
+        dispatch(navActions.lock());
+      }
+      if (isNavLocked && isNavTransPossible) {
+        dispatch(navActions.unlock());
+      }
   };
 
   if (isMenuVisible) {
