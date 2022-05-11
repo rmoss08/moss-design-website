@@ -1,37 +1,37 @@
 .menu {
-    visibility: hidden;
-    width: 100vw;
-    position: fixed;
-    top: -10vh;
-    z-index: 5;
-    background: #999999bb;
-    transition: visibility 1.5s linear, top 1.5s ease-in, right 1.5s ease-in;
+  visibility: hidden;
+  width: 100vw;
+  position: fixed;
+  top: -10vh;
+  z-index: 5;
+  background: #999999bb; 
+  backdrop-filter: blur(5px);
+  transition: visibility 1.5s linear, top 1.2s ease-out, right 1.2s ease-out;
 }
 
 .show {
-    visibility: visible;
-    top: 10vh;
+  visibility: visible;
+  top: 10vh;
 }
 
 .pagelist-wrapper {
-    position: relative;
-    top: 30%;
-    text-align: center;
-    margin: 2rem auto;
-    padding: 0;
+  position: relative;
+  top: 25%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
 }
 
-
 @media (min-width: 550px) {
-    .menu {
-        width: 50vw;
-        max-width: 34rem;
-        height: 100vh;
-     top: 10vh;
-     right: -30vw
- }
+  .menu {
+    width: 50vw;
+    max-width: 34rem;
+    height: 100vh;
+    top: 10vh;
+    right: -50vw;
+  }
 
- .show {
-     right: 0;
- }
+  .show {
+    right: 0;
+  }
 }

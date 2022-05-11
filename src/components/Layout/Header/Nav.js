@@ -13,7 +13,6 @@ const Nav = () => {
   const isNavTransparent = useSelector((state) => state.nav.isTransparent);
   const isNavVisible = useSelector((state) => state.nav.isVisible);
   const isNavLocked = useSelector((state) => state.nav.isLocked);
-  // const isMenuVisible = useSelector((state) => state.menu.isVisible);
 
   const displayHeight = document.querySelector('html').clientHeight;
   const yPos = useScreenPosition().y;
@@ -48,7 +47,7 @@ const Nav = () => {
     return () => {
       isMounted = false;
     };
-  }, [yPos, isNavLocked]);
+  }, [yPos, isNavLocked, isNavTransparent, isNavVisible]);
 
   let navClasses;
   let logoClasses;

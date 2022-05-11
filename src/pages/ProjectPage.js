@@ -57,13 +57,10 @@ const ProjectPage = () => {
         <h2>RENDERINGS</h2>
         <Gallery id='pp-gallery-1' images={gallery1} />
         <Gallery id='pp-gallery-2' images={gallery2} />
-        <Gallery id='pp-gallery-3' images={gallery3} />
       </div>
       <div className="margin">
         <h2>DRAWINGS</h2>
         <Gallery id='pp-gallery-4' images={gallery4} />
-        <Gallery id='pp-gallery-5' images={gallery5} />
-
       </div>
     </Layout>
   );

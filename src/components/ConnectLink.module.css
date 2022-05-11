@@ -14,3 +14,9 @@
     background-color: #5a5858;
     color: whitesmoke
 }
+
+@media (min-width: 850px) {
+    .connect-link {
+        margin: 4rem 0;
+    }
+}
