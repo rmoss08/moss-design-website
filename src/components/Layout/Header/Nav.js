@@ -8,10 +8,8 @@ import { navActions } from '../../../store/nav-slice';
 import { useDispatch, useSelector } from 'react-redux';
 
 const Nav = () => {
-  console.log('Nav rendered')
-
   const dispatch = useDispatch();
-  
+
   const isNavTransparent = useSelector((state) => state.nav.isTransparent);
   const isNavVisible = useSelector((state) => state.nav.isVisible);
   const isNavLocked = useSelector((state) => state.nav.isLocked);
@@ -58,16 +56,17 @@ const Nav = () => {
   if (isNavTransparent && isNavVisible) {
     navClasses = `${styles.nav}`;
     logoClasses = `${styles.logo} ${styles['grey-fill']}`;
-  }
-  if (!isNavTransparent && isNavVisible) {
+  } else if (isNavTransparent && !isNavVisible) {
+    navClasses = `hidden ${styles.nav}`;
+    logoClasses = `${styles.logo} ${styles['black-fill']}`;
+  } else if (!isNavTransparent && !isNavVisible) {
+    navClasses = `hidden ${styles.nav} ${styles.sticky}`;
+    logoClasses = `${styles.logo} ${styles['black-fill']}`;
+  } else {
     navClasses = `${styles.nav} ${styles.sticky} ${styles['nav-background']}`;
     logoClasses = `${styles.logo} ${styles['black-fill']}`;
   }
-  if (!isNavTransparent && !isNavVisible) {
-    navClasses = `hidden ${styles.nav} ${styles.sticky}`;
-    logoClasses = `${styles.logo} ${styles['black-fill']}`;
-  }
-
+  
   return (
     <nav className={navClasses}>
       <Link to="/">

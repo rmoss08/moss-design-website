@@ -38,19 +38,15 @@ const useScreenPosition = () => {
 
     if (viewportWidth < 500) {
       window.addEventListener('touchmove', scrollHandler);
-      console.log('add eventListener')
     } else {
       window.addEventListener('scroll', scrollHandler);
-      console.log('add eventListener')
     }
     return () => {
       clearTimeout(timer);
       if (viewportWidth < 500) {
         window.removeEventListener('touchmove', scrollHandler);
-        console.log('remove eventListener')
       } else {
         window.removeEventListener('scroll', scrollHandler);
-        console.log('remove eventListener')
       }
     };
   }, [viewportWidth]);
