@@ -9,21 +9,17 @@ const BurgerMenu = () => {
   const dispatch = useDispatch(menuActions);
   const isMenuVisible = useSelector(state => state.menu.isVisible)
   const isNavLocked = useSelector(state => state.nav.isLocked)
-  const isNavTransPossible = useSelector(state => state.nav.isTransparencyPossible)
   
   let line1Classes;
   let line2Classes;
   let line3Classes;
-
-  // useEffect(() => {
-  // }, [isNavLocked, isNavTransPossible]);
 
   const burgerMenuClickHandler = () => {
       dispatch(menuActions.toggleMenu());
       if (!isNavLocked) {
         dispatch(navActions.lock());
       }
-      if (isNavLocked && isNavTransPossible) {
+      if (isNavLocked) {
         dispatch(navActions.unlock());
       }
   };

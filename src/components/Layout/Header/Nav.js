@@ -48,7 +48,7 @@ const Nav = () => {
     return () => {
       isMounted = false;
     };
-  }, [yPos]);
+  }, [yPos, isNavLocked]);
 
   let navClasses;
   let logoClasses;
