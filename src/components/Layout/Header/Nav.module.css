@@ -26,9 +26,8 @@
 .logo {
   display: flex;
   align-items: center;
-  width: auto;
+  width: 8vw;
   min-width: 7.5rem;
-  height: 8vh;
   transition: fill 1.2s ease-out;
 }
 
