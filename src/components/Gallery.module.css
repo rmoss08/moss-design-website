@@ -31,8 +31,6 @@
 @media (min-width: 540px) {
     .gallery {
         flex-wrap: nowrap;
-        width: 80vw;
-        margin: 2rem auto;
     }
 
     .gallery img {

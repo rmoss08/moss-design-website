@@ -1,4 +1,3 @@
-import { useLayoutEffect, useState } from 'react';
 import styles from './Gallery.module.css';
 import useScrollPoisiton from '../hooks/use-scroll-position';
 
@@ -16,9 +15,9 @@ const Gallery = (props) => {
   let galleryClasses;
   
   if (yPos < 300) {
-    galleryClasses = `hidden ${styles.gallery}`;
+    galleryClasses = `hidden margin ${styles.gallery}`;
   } else {
-    galleryClasses = `visible ${styles.gallery}`;
+    galleryClasses = `visible margin ${styles.gallery}`;
   }
 
   return (
