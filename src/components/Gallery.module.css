@@ -6,26 +6,11 @@
 }
 
 .gallery img {
-    margin: 1rem auto;
+    margin: 1rem 2rem;
     width: auto;
     min-width: 18rem;
     max-width: 40%;
     height: auto;
-}
-
-.opacity {
-    animation-duration: 3s;
-    animation-timing-function: ease-in;
-    animation-name: fadein;
-}
-
-@keyframes fadein {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 @media (min-width: 540px) {

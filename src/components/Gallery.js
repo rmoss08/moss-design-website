@@ -12,9 +12,10 @@ const Gallery = (props) => {
     />
   ));
 
+  const hiddenDistance = 300 + (550 * props.distance);
   let galleryClasses;
   
-  if (yPos < 300) {
+  if (yPos < hiddenDistance) {
     galleryClasses = `hidden margin ${styles.gallery}`;
   } else {
     galleryClasses = `visible margin ${styles.gallery}`;

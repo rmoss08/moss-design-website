@@ -33,8 +33,8 @@ const HomePage = () => {
   return (
     <Layout>
       <BackgroundImage src={frontViewRendering} />
-      <Gallery id="hp-gallery-1" images={gallery1} />
-      <Gallery id="hp-gallery-2" images={gallery2} />
+      <Gallery id="hp-gallery-1" images={gallery1} distance={0} />
+      <Gallery id="hp-gallery-2" images={gallery2} distance={1} />
       <Services />
     </Layout>
   );
