@@ -4,27 +4,27 @@ import styles from './Services.module.css';
 const SERVICES = [
   {
     id: 's1',
-    title: 'RENDERING',
+    title: 'EXTERIOR DESIGN',
     description:
-      'A multiple of how much money they earn every year? How many fans or Facebook followers they have? Or the number of shirts they sell? By looking at how much the club down the road went for and playing a game of higher or lower?',
+      '(PLACEHOLDER TEXT: This website is designed for my sister, Chloe. She is a Master of Architecture student at the University of British Columbia. During her studies, she also works as an architectural designer. Moss Designs is her business. The website is meant to showcase her work.)',
   },
   {
     id: 's2',
-    title: 'EMOTIONAL SUPPORT',
+    title: 'INTERIOR DESIGN',
     description:
-      'Another method was proposed by a “Michael C” in the comments section. A musicals lover, Michael riffed on the song Seasons of Love from Rent and suggested the value of a club should be measured in highlights, victories, players, titles and love.',
+    '(PLACEHOLDER TEXT: The website is almost finished. There is another feature I want to add, we need higher resolution pictures for the header image, Chloe needs to make some additional renderings to fill up the website with images, and copywrite what she wants the website to say.)',
   },
   {
     id: 's3',
-    title: 'INTERIOR DESIGN',
+    title: 'REGULATORY CONSULTING',
     description:
-      "So, how much will someone pay for Chelsea, England’s fourth-most successful team, global football’s eighth-richest club, the recently-crowned world champions — especially now Roman Abramovich has stuck a great big 'For Sale' sign outside?",
+      "(PLACEHOLDER TEXT: So, for now, most of the text is just placeholder text featuring my explanations about the website. This section is meant to describe some of the services Chloe offers as an architectural designer.)",
   },
   {
     id: 's4',
-    title: 'BESPOKE',
+    title: 'RENDERINGS',
     description:
-      'Before we go any further with these forays into uncharted territory, let us make one thing very clear: none of this really matters when compared to what is happening in Ukraine. It is only football and money, after all.',
+      '(PLACEHOLDER TEXT: You’ll notice the website is mainly image based. Architecture is obviously a very visual medium. As such, the website has been designed with a magazine feel in mind which should draw attention to Chloe’s amazing work.)',
   },
 ];
 

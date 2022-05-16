@@ -8,10 +8,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { navActions } from '../store/nav-slice';
 import { useEffect } from 'react';
 
-const gallery1 = ProjectGalleryRenderings.slice(0,2);
-const gallery2 = ProjectGalleryRenderings.slice(2,4);
+const gallery1 = ProjectGalleryRenderings.slice(0, 2);
+const gallery2 = ProjectGalleryRenderings.slice(2, 4);
 const gallery3 = ProjectGalleryRenderings.slice(4);
-const gallery4 = ProjectGalleryDrawings.slice(0,2);
+const gallery4 = ProjectGalleryDrawings.slice(0, 2);
 const gallery5 = ProjectGalleryDrawings.slice(2);
 
 const ProjectPage = () => {
@@ -20,13 +20,13 @@ const ProjectPage = () => {
   const isNavLocked = useSelector((state) => state.nav.isLocked);
 
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     if (!isNavTransparent) {
       dispatch(navActions.addTransparency());
     }
-    if (!isNavVisible) { 
-      dispatch(navActions.showNav())
+    if (!isNavVisible) {
+      dispatch(navActions.showNav());
     }
     if (isNavLocked) {
       dispatch(navActions.unlock());
@@ -35,16 +35,14 @@ const ProjectPage = () => {
 
   const introText = (
     <p className="margin">
-      Those close to the oligarch insist they do not expect Abramovich to be
-      placed on the sanctions list. They suggest he has done nothing to justify
-      such action and is merely a successful businessman removed from politics.
-      It remains to be seen, too, whether the UK’s Foreign Office and National
-      Crime Agency would be able to prove links to Vladimir Putin’s regime to
-      justify freezing his British-based assets. As yet no one, from the United
-      States to the European Union, has moved to name the 55-year-old as a
-      designated individual on their Consolidated List of financial sanctions
-      targets. They would not want to risk losing a legal challenge once
-      sanctions have been imposed.
+      (PLACEHOLDER TEXT: This website is designed for my sister, Chloe. She is a
+      Master of Architecture student at the University of British Columbia.
+      During her studies, she also works as an architectural designer. Moss
+      Design is her business. The website is meant to showcase her work. Chloe’s
+      first house project was in West Vancouver, British Columbia. She designed
+      the entire house you see before you. This page showcases that project.
+      Eventually, this text block will be filled with Chloe’s description of the
+      project, setting up image galleries below.)
     </p>
   );
 
@@ -55,12 +53,12 @@ const ProjectPage = () => {
       {introText}
       <div className="margin">
         <h2>RENDERINGS</h2>
-        <Gallery id='pp-gallery-1' images={gallery1} />
-        <Gallery id='pp-gallery-2' images={gallery2} />
+        <Gallery id="pp-gallery-1" images={gallery1} />
+        <Gallery id="pp-gallery-2" images={gallery2} />
       </div>
       <div className="margin">
         <h2>DRAWINGS</h2>
-        <Gallery id='pp-gallery-4' images={gallery4} />
+        <Gallery id="pp-gallery-4" images={gallery4} />
       </div>
     </Layout>
   );

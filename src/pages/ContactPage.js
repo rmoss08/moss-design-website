@@ -32,7 +32,10 @@ const ContactPage = () => {
       <div className={`margin min-height ${styles.grid}`}>
         <div>
           <h1>CONTACT</h1>
-          <p>I'd love to hear from you. Send me an email to get in touch.</p>
+          <p>
+            (PLACEHOLDER TEXT: If you have a house project in mind, I would love to hear from you.
+            Click the button below to send me an email.)
+          </p>
           <ConnectButton />
         </div>
         <img
