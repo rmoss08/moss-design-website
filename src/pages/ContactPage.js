@@ -1,6 +1,6 @@
 import ConnectButton from '../components/ConnectLink';
 import Layout from '../components/Layout/Layout';
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import { navActions } from '../store/nav-slice';
 import { useDispatch, useSelector } from 'react-redux';
 import HouseGifSrc from '../assets/images/deconstructed-house.gif';

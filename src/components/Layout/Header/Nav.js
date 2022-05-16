@@ -20,7 +20,6 @@ const Nav = () => {
   useEffect(() => {
     let isMounted = true;
 
-    // I could try cancelling the dispatches in the clean up function
     if (isMounted) {
       const navHeight = document.querySelector('nav').clientHeight;
       const scrollYLimit = displayHeight - navHeight;

@@ -3,7 +3,7 @@ import Layout from '../components/Layout/Layout';
 import profileImage from '../assets/images/chloe.jpg';
 
 import styles from './AboutPage.module.css';
-import { useLayoutEffect, useEffect } from 'react';
+import { useEffect } from 'react';
 import { navActions } from '../store/nav-slice';
 import { useDispatch, useSelector } from 'react-redux';
 

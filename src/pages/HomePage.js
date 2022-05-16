@@ -6,7 +6,6 @@ import frontViewRendering from '../assets/images/front-view-rendering-square.png
 import { HomePageGalleryImages } from '../images';
 import { useDispatch, useSelector } from 'react-redux';
 import { navActions } from '../store/nav-slice';
-import { useLinkClickHandler } from 'react-router-dom';
 import { useEffect } from 'react';
 
 const gallery1 = HomePageGalleryImages.slice(0, 2);

@@ -1,4 +1,4 @@
-import { createSlice, configureStore } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import navReducer from './nav-slice';
 import menuReducer from './menu-slice';
 
