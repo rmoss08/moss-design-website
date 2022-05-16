@@ -2,7 +2,7 @@
   visibility: hidden;
   width: 100vw;
   position: fixed;
-  top: -10vh;
+  top: -50vh;
   z-index: 5;
   background: #999999bb; 
   backdrop-filter: blur(5px);
