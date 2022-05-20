@@ -1,12 +1,12 @@
-import Layout from '../components/Layout/Layout';
-import BackgroundImage from '../components/BackgroundImage';
-import rearViewRendering from '../assets/images/rear-view-rendering.jpg';
-import { ProjectGalleryDrawings, ProjectGalleryRenderings } from '../images';
-import Gallery from '../components/Gallery';
-import styles from './ProjectPage.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { navActions } from '../store/nav-slice';
+import Layout from '../components/Layout/Layout';
+import Slideshow from '../components/Slideshow';
+import Gallery from '../components/Gallery';
+import styles from './ProjectPage.module.css';
 import { useEffect } from 'react';
+import { BackgroundImages } from '../images';
+import { ProjectGalleryDrawings, ProjectGalleryRenderings } from '../images';
 
 const gallery1 = ProjectGalleryRenderings.slice(0, 2);
 const gallery2 = ProjectGalleryRenderings.slice(2, 4);
@@ -48,7 +48,7 @@ const ProjectPage = () => {
 
   return (
     <Layout>
-      <BackgroundImage src={rearViewRendering} />
+      <Slideshow imgs={BackgroundImages} />
       <h2 className={styles.location}>WEST VANCOUVER, BC</h2>
       {introText}
       <div className="margin">
