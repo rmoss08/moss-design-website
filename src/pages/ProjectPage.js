@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { navActions } from '../store/nav-slice';
 import Layout from '../components/Layout/Layout';
-import Slideshow from '../components/Slideshow';
+import Slideshow from '../components/Slideshow/Slideshow';
 import Gallery from '../components/Gallery';
 import styles from './ProjectPage.module.css';
 import { useEffect } from 'react';
