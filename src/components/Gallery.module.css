@@ -14,11 +14,6 @@
   transition: filter ease-out 300ms;
 }
 
-.gallery img:hover {
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1);
-}
-
 @media (min-width: 540px) {
   .gallery {
     flex-wrap: nowrap;

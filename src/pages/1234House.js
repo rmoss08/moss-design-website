@@ -3,7 +3,7 @@ import { navActions } from '../store/nav-slice';
 import Layout from '../components/Layout/Layout';
 import Slideshow from '../components/Slideshow/Slideshow';
 import Gallery from '../components/Gallery';
-import styles from './ProjectPage.module.css';
+import styles from './1234House.module.css';
 import { useEffect } from 'react';
 import { BackgroundImages } from '../images';
 import { ProjectGalleryDrawings, ProjectGalleryRenderings } from '../images';

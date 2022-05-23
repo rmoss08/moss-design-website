@@ -57,6 +57,15 @@ a:hover {
   cursor: pointer;
 }
 
+.greyscale img:hover {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+.page-title {
+  margin-bottom: 2rem;
+}
+
 .hidden {
   visibility: hidden;
   opacity: 0;

@@ -31,7 +31,7 @@ const ContactPage = () => {
     <Layout>
       <div className={`margin min-height ${styles.grid}`}>
         <div>
-          <h1>CONTACT</h1>
+          <h1 className='page-title'>CONTACT</h1>
           <p>
             (PLACEHOLDER TEXT: If you have a house project in mind, I would love to hear from you.
             Click the button below to send me an email.)
