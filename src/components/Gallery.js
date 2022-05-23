@@ -16,9 +16,9 @@ const Gallery = (props) => {
   let galleryClasses;
   
   if (yPos < hiddenDistance) {
-    galleryClasses = `hidden margin greyscale ${styles.gallery}`;
+    galleryClasses = `hidden greyscale ${styles.gallery}`;
   } else {
-    galleryClasses = `visible margin greyscale ${styles.gallery}`;
+    galleryClasses = `visible greyscale ${styles.gallery}`;
   }
 
   return (
