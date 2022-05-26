@@ -21,39 +21,12 @@ const Slideshow = (props) => {
   };
   
   useLayoutEffect(() => {
-    alternateIndex();
-    
+    window.requestAnimationFrame(alternateIndex);
+
     return () => {
       clearTimeout(timer);
     };
   }, [index]);
-
-
-  let image1;
-  let image2;
-  let orb1Classes;
-  let orb2Classes;
-
-  const setBackgroundVisability = () => {
-    if (index === 0) {
-      image1 = true;
-      image2 = false;
-    } else {
-      image1 = false;
-      image2 = true;
-    }
-  };
-
-  const setOrbClasses = () => {
-    if (index === 0) {
-      orb1Classes = `${styles.highlight} ${styles.orb}`;
-      orb2Classes = `${styles.orb}`;
-    } else {
-      orb1Classes = `${styles.orb}`;
-      orb2Classes = `${styles.highlight} ${styles.orb}`;
-    }
-  };
-  
 
   const menuClickHandler = (event) => {
     const orbId = event.target.id;
@@ -66,21 +39,28 @@ const Slideshow = (props) => {
       setIndex(1);
       
     }
-    setBackgroundVisability();
-    setOrbClasses();
   };
   
-  setBackgroundVisability();
-  setOrbClasses();
+  let imgVisability;
+  let orbClasses;
 
-
+  if (index === 0) {
+    imgVisability= [true, false];
+    orbClasses = [`${styles.highlight} ${styles.orb}`, `${styles.orb}`]
+  } else {
+    imgVisability = [false, true];
+    orbClasses = [`${styles.orb}`, `${styles.highlight} ${styles.orb}`]
+  }
+  
   return (
     <div className={styles.slideshow}>
-      <BackgroundImage src={props.imgs[0].src} visability={image1} />
-      <BackgroundImage src={props.imgs[1].src} visability={image2} />
+      <div className={styles.window}>
+        <BackgroundImage src={props.imgs[0].src} visability={imgVisability[0]} />
+        <BackgroundImage src={props.imgs[1].src} visability={imgVisability[1]} />
+      </div>
       <div className={styles.menu}>
-        <div id="orb1" className={orb1Classes} onClick={menuClickHandler} />
-        <div id="orb2" className={orb2Classes} onClick={menuClickHandler} />
+        <div id="orb1" className={orbClasses[0]} onClick={menuClickHandler} />
+        <div id="orb2" className={orbClasses[1]} onClick={menuClickHandler} />
       </div>
     </div>
   );
